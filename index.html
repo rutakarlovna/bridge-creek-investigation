@@ -3,51 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Bridge Creek Police Department</title>
 
 <style>
-body{
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial, sans-serif;
-background:#0f172a;
+}
+
+body{
+background:#0b1220;
 color:white;
 }
 
 header{
-background:#020617;
-padding:25px;
-text-align:center;
+background:#050b16;
 border-bottom:3px solid #1e40af;
+padding:25px;
 }
 
-h1{
-margin:0;
-font-size:40px;
+.logo{
+font-size:32px;
+font-weight:bold;
+letter-spacing:2px;
 }
 
 .subtitle{
 color:#94a3b8;
+margin-top:5px;
+}
+
+.warning{
+background:#991b1b;
+padding:12px;
+text-align:center;
+font-weight:bold;
 }
 
 .container{
-max-width:1200px;
+max-width:1300px;
 margin:auto;
-padding:40px 20px;
+padding:30px;
+}
+
+.dashboard{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
 }
 
 .card{
-background:#1e293b;
-padding:25px;
+background:#111827;
+border:1px solid #1f2937;
 border-radius:12px;
-margin-bottom:20px;
+padding:25px;
+transition:0.3s;
+}
+
+.card:hover{
+border-color:#3b82f6;
+transform:translateY(-3px);
+}
+
+.card h2{
+margin-bottom:15px;
+}
+
+.status{
+display:inline-block;
+background:#16a34a;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+margin-bottom:15px;
 }
 
 button{
+margin-top:15px;
+padding:12px 20px;
 background:#2563eb;
 border:none;
-padding:12px 20px;
-color:white;
 border-radius:8px;
+color:white;
 cursor:pointer;
 }
 
@@ -55,50 +96,164 @@ button:hover{
 background:#1d4ed8;
 }
 
-footer{
-text-align:center;
-padding:20px;
-color:#64748b;
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-bottom:30px;
 }
+
+.stat{
+background:#111827;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.stat-number{
+font-size:30px;
+font-weight:bold;
+color:#60a5fa;
+}
+
+footer{
+margin-top:40px;
+padding:25px;
+text-align:center;
+color:#94a3b8;
+border-top:1px solid #1f2937;
+}
+
+@media(max-width:800px){
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>BRIDGE CREEK POLICE DEPARTMENT</h1>
-<p class="subtitle">Case Database System</p>
+
+<div class="logo">
+BRIDGE CREEK POLICE DEPARTMENT
+</div>
+
+<div class="subtitle">
+Investigative Case Database System
+</div>
+
 </header>
+
+<div class="warning">
+АКТИВНОЕ РАССЛЕДОВАНИЕ • ДОСТУП ТОЛЬКО ДЛЯ СОТРУДНИКОВ
+</div>
 
 <div class="container">
 
+<div class="stats">
+
+<div class="stat">
+<div class="stat-number">1</div>
+Открытое дело
+</div>
+
+<div class="stat">
+<div class="stat-number">7</div>
+Подозреваемых
+</div>
+
+<div class="stat">
+<div class="stat-number">24</div>
+Улики
+</div>
+
+<div class="stat">
+<div class="stat-number">2</div>
+Связанных дела
+</div>
+
+</div>
+
+<div class="dashboard">
+
 <div class="card">
-<h2>Дело № BC-2025-017</h2>
+<div class="status">АКТИВНО</div>
+<h2>Дело Лины Харпер</h2>
+
 <p>
-Обнаружено тело девушки.
-Личность установлена:
-Лина Харпер, 17 лет.
+17 лет.
+Тело обнаружено возле реки утром.
+Предполагаемое время смерти:
+21:30–22:30.
 </p>
-<button onclick="location.href='case-lina.html'">
+
+<button>
 Открыть дело
 </button>
+
 </div>
 
 <div class="card">
-<h2>Пропавшая без вести</h2>
+<div class="status">АРХИВ</div>
+<h2>Эмма Харпер</h2>
+
 <p>
-Эмма Харпер.
-Пропала год назад.
+Пропала без вести год назад.
+Дело не раскрыто.
 </p>
+
 <button>
-Материалы засекречены
+Открыть архив
 </button>
+
+</div>
+
+<div class="card">
+<div class="status">БАЗА ДАННЫХ</div>
+<h2>Подозреваемые</h2>
+
+<p>
+Марк Уоллес,
+Райан Уоллес,
+Кайл Беннет,
+Сара Коулман,
+Томас Джонс.
+</p>
+
+<button>
+Открыть список
+</button>
+
+</div>
+
+<div class="card">
+<div class="status">УЛИКИ</div>
+<h2>Цифровой архив</h2>
+
+<p>
+Фотографии,
+отчёты экспертов,
+материалы допросов,
+видеозаписи.
+</p>
+
+<button>
+Просмотр архива
+</button>
+
+</div>
+
 </div>
 
 </div>
 
 <footer>
-Bridge Creek Police Department
+Bridge Creek Police Department © 2026
 </footer>
 
 </body>
