@@ -1,259 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Bridge Creek Police Department</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
-body{
-background:#0b1220;
-color:white;
-}
-
-header{
-background:#050b16;
-border-bottom:3px solid #1e40af;
-padding:25px;
-}
-
-.logo{
-font-size:32px;
-font-weight:bold;
-letter-spacing:2px;
-}
-
-.subtitle{
-color:#94a3b8;
-margin-top:5px;
-}
-
-.warning{
-background:#991b1b;
-padding:12px;
-text-align:center;
-font-weight:bold;
-}
-
-.container{
-max-width:1300px;
-margin:auto;
-padding:30px;
-}
-
-.dashboard{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-}
-
-.card{
-background:#111827;
-border:1px solid #1f2937;
-border-radius:12px;
-padding:25px;
-transition:0.3s;
-}
-
-.card:hover{
-border-color:#3b82f6;
-transform:translateY(-3px);
-}
-
-.card h2{
-margin-bottom:15px;
-}
-
-.status{
-display:inline-block;
-background:#16a34a;
-padding:5px 12px;
-border-radius:20px;
-font-size:12px;
-margin-bottom:15px;
-}
-
-button{
-margin-top:15px;
-padding:12px 20px;
-background:#2563eb;
-border:none;
-border-radius:8px;
-color:white;
-cursor:pointer;
-}
-
-button:hover{
-background:#1d4ed8;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
-margin-bottom:30px;
-}
-
-.stat{
-background:#111827;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-.stat-number{
-font-size:30px;
-font-weight:bold;
-color:#60a5fa;
-}
-
-footer{
-margin-top:40px;
-padding:25px;
-text-align:center;
-color:#94a3b8;
-border-top:1px solid #1f2937;
-}
-
-@media(max-width:800px){
-
-.stats{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridge Creek Police Database</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="terminal-body">
 
-<header>
+  <main class="terminal-screen">
 
-<div class="logo">
-BRIDGE CREEK POLICE DEPARTMENT
-</div>
+    <section class="login-panel">
 
-<div class="subtitle">
-Investigative Case Database System
-</div>
+      <div class="system-label">BRIDGE CREEK POLICE DEPARTMENT</div>
+      <div class="system-subtitle">CASE MANAGEMENT SYSTEM</div>
 
-</header>
+      <div class="terminal-line"></div>
 
-<div class="warning">
-АКТИВНОЕ РАССЛЕДОВАНИЕ • ДОСТУП ТОЛЬКО ДЛЯ СОТРУДНИКОВ
-</div>
+      <div class="case-info">
+        <p><span>Детектив:</span> AVA REED</p>
+        <p><span>Доступ:</span> LEVEL II</p>
+        <p><span>Дело:</span> BC-2025-017</p>
+        <p><span>Статус:</span> ACTIVE INVESTIGATION</p>
+      </div>
 
-<div class="container">
+      <div class="terminal-line"></div>
 
-<div class="stats">
+      <div class="menu">
+        <a href="pages/desktop.html">▶ Продолжить расследование</a>
+        <a href="pages/access.html">▶ Ввести код доступа</a>
+        <a href="case-lina.html">▶ Открыть дело Лины Харпер</a>
+        <a href="emma.html">▶ Архив Эммы Харпер</a>
+      </div>
 
-<div class="stat">
-<div class="stat-number">1</div>
-Открытое дело
-</div>
+      <div class="terminal-footer">
+        Несанкционированный доступ к материалам дела запрещён.
+      </div>
 
-<div class="stat">
-<div class="stat-number">7</div>
-Подозреваемых
-</div>
+    </section>
 
-<div class="stat">
-<div class="stat-number">24</div>
-Улики
-</div>
-
-<div class="stat">
-<div class="stat-number">2</div>
-Связанных дела
-</div>
-
-</div>
-
-<div class="dashboard">
-
-<div class="card">
-<div class="status">АКТИВНО</div>
-<h2>Дело Лины Харпер</h2>
-
-<p>
-17 лет.
-Тело обнаружено возле реки утром.
-Предполагаемое время смерти:
-21:30–22:30.
-</p>
-
-<button onclick="location.href='case-lina.html'">
-Открыть дело
-</button>
-
-</div>
-
-<div class="card">
-<div class="status">АРХИВ</div>
-<h2>Эмма Харпер</h2>
-
-<p>
-Пропала без вести год назад.
-Дело не раскрыто.
-</p>
-
-<button onclick="location.href='emma.html'">
-Открыть архив
-</button>
-
-</div>
-
-<div class="card">
-<div class="status">БАЗА ДАННЫХ</div>
-<h2>Подозреваемые</h2>
-
-<p>
-Марк Уоллес,
-Райан Уоллес,
-Кайл Беннет,
-Сара Коулман,
-Томас Джонс.
-</p>
-
-<button onclick="location.href='suspects.html'">
-Открыть список
-</button>
-
-</div>
-
-<div class="card">
-<div class="status">УЛИКИ</div>
-<h2>Цифровой архив</h2>
-
-<p>
-Фотографии,
-отчёты экспертов,
-материалы допросов,
-видеозаписи.
-</p>
-
-<button onclick="location.href='evidence.html'">
-Просмотр архива
-</button>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-Bridge Creek Police Department © 2026
-</footer>
+  </main>
 
 </body>
 </html>
