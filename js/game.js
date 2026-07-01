@@ -66,6 +66,7 @@ async function loadSuspects() {
             <h2>${person.name}</h2>
             <p><strong>Возраст:</strong> ${person.age}</p>
             <p>${person.description}</p>
+          
             <button onclick="openSuspect('${person.id}')">Открыть досье</button>
           </div>
         </div>
@@ -228,6 +229,24 @@ async function loadSuspectProfile() {
         <h1>${person.name}</h1>
         <p><strong>Возраст:</strong> ${person.age}</p>
         <p>${person.description}</p>
+        <div class="suspect-meter">
+  <div>Уровень подозрения: ${person.suspicion || 0}%</div>
+  <div class="bar">
+    <div class="fill" style="width:${person.suspicion || 0}%"></div>
+  </div>
+</div>
+
+<div class="case-section">
+  <h2>Алиби</h2>
+  <p>${person.alibi || "Нет данных."}</p>
+</div>
+
+<div class="case-section">
+  <h2>Связи</h2>
+  <ul>
+    ${(person.connections || []).map(item => `<li>${item}</li>`).join("")}
+  </ul>
+</div>
 
         <div class="case-section">
           <h2>Статус в расследовании</h2>
