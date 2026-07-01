@@ -171,7 +171,7 @@ async function loadEvidence() {
             <h2>${item.title}</h2>
             <p>${item.description}</p>
             <span>${item.status}</span>
-            <button onclick="openDocument('${item.file}', '${item.title}')">Открыть документ</button>
+           <button onclick="openDocument('${item.file}', '${item.title}')">Открыть документ</button>
           </div>
         </div>
       `;
