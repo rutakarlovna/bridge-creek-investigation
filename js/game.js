@@ -25,13 +25,19 @@ async function checkAccessCode() {
     saveProgress(found.id);
 
     result.innerHTML = `
-      <div class="success-box">
-        <h2>${found.title}</h2>
-        <p>${found.description}</p>
-        <p>Прогресс расследования: ${found.progress}%</p>
-        <button onclick="location.href='desktop.html'">Вернуться к расследованию</button>
-      </div>
-    `;
+  <div class="success-box">
+    <h2>НОВЫЕ МАТЕРИАЛЫ ДОБАВЛЕНЫ</h2>
+    <h3>${found.title}</h3>
+    <p>${found.description}</p>
+    <p>Прогресс расследования: ${found.progress}%</p>
+
+    <ul class="unlock-list">
+      ${found.unlocks.map(item => `<li>✓ ${item}</li>`).join("")}
+    </ul>
+
+    <button onclick="location.href='desktop.html'">Перейти к расследованию</button>
+  </div>
+`;
   } else {
     result.innerHTML = `
       <div class="error-box">
