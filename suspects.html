@@ -1,267 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Подозреваемые | Bridge Creek Police Department</title>
-
-<style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-font-family:Arial, sans-serif;
-}
-
-body{
-background:#0b1220;
-color:#ffffff;
-}
-
-header{
-background:#050b16;
-border-bottom:3px solid #1e40af;
-padding:24px;
-}
-
-.logo{
-font-size:28px;
-font-weight:bold;
-letter-spacing:2px;
-}
-
-.subtitle{
-color:#94a3b8;
-margin-top:6px;
-}
-
-.warning{
-background:#991b1b;
-padding:12px;
-text-align:center;
-font-weight:bold;
-}
-
-.container{
-max-width:1300px;
-margin:auto;
-padding:30px;
-}
-
-.back{
-display:inline-block;
-margin-bottom:25px;
-color:#60a5fa;
-text-decoration:none;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:22px;
-}
-
-.card{
-background:#111827;
-border:1px solid #1f2937;
-border-radius:14px;
-overflow:hidden;
-}
-
-.card img{
-width:100%;
-height:330px;
-object-fit:cover;
-display:block;
-}
-
-.info{
-padding:18px;
-}
-
-.tag{
-display:inline-block;
-font-size:12px;
-padding:5px 10px;
-border-radius:20px;
-margin-bottom:12px;
-font-weight:bold;
-}
-
-.red{background:#7f1d1d;}
-.orange{background:#92400e;}
-.blue{background:#1e3a8a;}
-.gray{background:#374151;}
-.green{background:#14532d;}
-
-h1{
-margin-bottom:10px;
-}
-
-h2{
-font-size:22px;
-margin-bottom:8px;
-}
-
-p{
-color:#cbd5e1;
-line-height:1.5;
-}
-
-.level{
-margin-top:14px;
-}
-
-.bar{
-height:8px;
-background:#374151;
-border-radius:20px;
-overflow:hidden;
-margin-top:7px;
-}
-
-.fill{
-height:100%;
-background:#60a5fa;
-}
-
-.note{
-margin-top:25px;
-background:#111827;
-border-left:4px solid #1e40af;
-padding:18px;
-color:#cbd5e1;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Подозреваемые</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
 <header>
-<div class="logo">BRIDGE CREEK POLICE DEPARTMENT</div>
-<div class="subtitle">Suspect & Person Database</div>
+  <div class="logo">BRIDGE CREEK POLICE DEPARTMENT</div>
+  <div class="subtitle">Suspect Database</div>
 </header>
 
 <div class="warning">
-МАТЕРИАЛЫ АКТИВНОГО РАССЛЕДОВАНИЯ • ДОСТУП ОГРАНИЧЕН
+  МАТЕРИАЛЫ АКТИВНОГО РАССЛЕДОВАНИЯ • ДОСТУП ОГРАНИЧЕН
 </div>
 
-<div class="container">
+<main class="container">
 
-<a class="back" href="index.html">← Вернуться в базу</a>
+  <a class="back" href="pages/desktop.html">← Вернуться на рабочий стол</a>
 
-<h1>База лиц по делу Лины Харпер</h1>
+  <h1>База лиц по делу Лины Харпер</h1>
 
-<div class="note">
-Список содержит подозреваемых, свидетелей и связанных лиц. Уровень подозрения меняется по мере открытия новых материалов.
-</div>
+  <div class="note">
+    Некоторые карточки скрыты. Новые лица будут открываться после ввода кодов доступа.
+  </div>
 
-<br>
+  <br>
 
-<div class="grid">
+  <div id="suspectsGrid" class="grid"></div>
 
-<div class="card">
-<img src="assets/images/lina-harper.png" alt="Лина Харпер">
-<div class="info">
-<span class="tag red">ЖЕРТВА</span>
-<h2>Лина Харпер</h2>
-<p>17 лет. Найдена мёртвой у реки. Тело было перемещено после убийства.</p>
-<div class="level">Статус по делу</div>
-<div class="bar"><div class="fill" style="width:100%"></div></div>
-</div>
-</div>
+</main>
 
-<div class="card">
-<img src="assets/images/mark-wallace.png" alt="Марк Уоллес">
-<div class="info">
-<span class="tag orange">ПОДОЗРЕВАЕМЫЙ</span>
-<h2>Марк Уоллес</h2>
-<p>38 лет. Бывший полицейский. Связан с Линой и имеет доступ к старому оружию.</p>
-<div class="level">Уровень подозрения: 85%</div>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-</div>
-</div>
-
-<div class="card">
-<img src="assets/images/frank-harper.png" alt="Франк Харпер">
-<div class="info">
-<span class="tag gray">СВЯЗАННОЕ ЛИЦО</span>
-<h2>Франк Харпер</h2>
-<p>Отец Лины. Находится в тяжёлом эмоциональном состоянии после смерти дочери.</p>
-<div class="level">Уровень подозрения: 20%</div>
-<div class="bar"><div class="fill" style="width:20%"></div></div>
-</div>
-</div>
-
-<div class="card">
-<img src="assets/images/ryan-wallace.png" alt="Райан Уоллес">
-<div class="info">
-<span class="tag blue">НЕСОВЕРШЕННОЛЕТНИЙ</span>
-<h2>Райан Уоллес</h2>
-<p>13 лет. Сын Марка Уоллеса. Замечен рядом с сараем в день убийства.</p>
-<div class="level">Уровень подозрения: 45%</div>
-<div class="bar"><div class="fill" style="width:45%"></div></div>
-</div>
-</div>
-
-<div class="card">
-<img src="assets/images/sarah-coleman.png" alt="Сара Коулман">
-<div class="info">
-<span class="tag orange">ПОДОЗРЕВАЕМАЯ</span>
-<h2>Сара Коулман</h2>
-<p>17 лет. Новая девушка Кайла. Участвовала в конфликте с Линой до её смерти.</p>
-<div class="level">Уровень подозрения: 70%</div>
-<div class="bar"><div class="fill" style="width:70%"></div></div>
-</div>
-</div>
-
-<div class="card">
-<img src="assets/images/thomas-jones.png" alt="Томас Джонс">
-<div class="info">
-<span class="tag orange">ПОДОЗРЕВАЕМЫЙ</span>
-<h2>Томас Джонс</h2>
-<p>45 лет. Священник. Последним подвозил Лину вечером перед смертью.</p>
-<div class="level">Уровень подозрения: 65%</div>
-<div class="bar"><div class="fill" style="width:65%"></div></div>
-</div>
-</div>
-
-<div class="card">
-<img src="assets/images/thomas-hill.png" alt="Томас Хилл">
-<div class="info">
-<span class="tag red">ЗАДЕРЖАН</span>
-<h2>Томас Хилл</h2>
-<p>Фигурант дела о похищениях. Связан с синем фургоном, но не подтверждён как убийца Лины.</p>
-<div class="level">Уровень подозрения: 50%</div>
-<div class="bar"><div class="fill" style="width:50%"></div></div>
-</div>
-</div>
-
-<div class="card">
-<img src="assets/images/betty-reed.png" alt="Бетти Рид">
-<div class="info">
-<span class="tag green">СВИДЕТЕЛЬ</span>
-<h2>Бетти Рид</h2>
-<p>15 лет. Дочь Авы Рид. Видела конфликт Лины, Сары и Кайла.</p>
-<div class="level">Уровень подозрения: 10%</div>
-<div class="bar"><div class="fill" style="width:10%"></div></div>
-</div>
-</div>
-
-<div class="card">
-<img src="assets/images/kyle-bennett.png" alt="Кайл Беннет">
-<div class="info">
-<span class="tag orange">ПОДОЗРЕВАЕМЫЙ</span>
-<h2>Кайл Беннет</h2>
-<p>18 лет. Бывший парень Лины. Был рядом с ней в день убийства. Позже найден раненым.</p>
-<div class="level">Уровень подозрения: 75%</div>
-<div class="bar"><div class="fill" style="width:75%"></div></div>
-</div>
-</div>
-
-</div>
-
-</div>
+<script src="js/game.js"></script>
+<script>
+  loadSuspects();
+</script>
 
 </body>
 </html>

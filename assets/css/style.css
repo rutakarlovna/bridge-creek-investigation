@@ -222,3 +222,31 @@ footer {
   font-size: 18px;
   margin-bottom: 10px;
 }
+.locked-card {
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    45deg,
+    #111827,
+    #111827 10px,
+    #0f172a 10px,
+    #0f172a 20px
+  );
+  opacity: 0.75;
+}
+
+.success-box {
+  margin-top: 20px;
+  border-left: 4px solid #22c55e;
+  background: #052e16;
+  padding: 18px;
+}
+
+.error-box {
+  margin-top: 20px;
+  border-left: 4px solid #ef4444;
+  background: #450a0a;
+  padding: 18px;
+}
