@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "code": "BC-017-A1",
+    "title": "Конверт 1 — Пролог",
+    "description": "Открывает начало дела, личность жертвы и первые материалы расследования.",
+    "progress": 10,
+    "unlocks": ["case-main", "lina-harper", "frank-harper", "first-report"]
+  },
+  {
+    "id": 2,
+    "code": "AUTOPSY-224",
+    "title": "Конверт 2 — Тело",
+    "description": "Открывает материалы вскрытия, место обнаружения тела и первые выводы экспертов.",
+    "progress": 20,
+    "unlocks": ["autopsy-report", "crime-scene", "broken-phone"]
+  },
+  {
+    "id": 3,
+    "code": "PHONE-317",
+    "title": "Конверт 3 — Её жизнь",
+    "description": "Открывает телефон Лины, переписки, сведения о ребёнке и связь с Марком.",
+    "progress": 30,
+    "unlocks": ["lina-phone", "mark-wallace", "baby-file", "messages-mark"]
+  },
+  {
+    "id": 4,
+    "code": "SARAH-1940",
+    "title": "Конверт 4 — Избиение",
+    "description": "Открывает Сару, Кайла, показания Бетти и камеры со священником.",
+    "progress": 40,
+    "unlocks": ["sarah-coleman", "kyle-bennett", "betty-reed", "cctv-priest"]
+  },
+  {
+    "id": 5,
+    "code": "SHOT-2215",
+    "title": "Конверт 5 — Стрельба",
+    "description": "Открывает материалы по нападению на Кайла.",
+    "progress": 50,
+    "unlocks": ["kyle-shooting", "unknown-car", "hospital-report"]
+  }
+]

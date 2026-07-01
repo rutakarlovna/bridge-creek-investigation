@@ -1,0 +1,83 @@
+[
+  {
+    "id": "lina-harper",
+    "name": "Лина Харпер",
+    "role": "Жертва",
+    "age": "17 лет",
+    "photo": "lina-harper.png",
+    "unlockLevel": 1,
+    "description": "Найдена мёртвой у реки. Тело было перемещено после убийства."
+  },
+  {
+    "id": "frank-harper",
+    "name": "Франк Харпер",
+    "role": "Отец жертвы",
+    "age": "—",
+    "photo": "frank-harper.png",
+    "unlockLevel": 1,
+    "description": "Отец Лины. Находится в тяжёлом эмоциональном состоянии."
+  },
+  {
+    "id": "mark-wallace",
+    "name": "Марк Уоллес",
+    "role": "Подозреваемый",
+    "age": "38 лет",
+    "photo": "mark-wallace.png",
+    "unlockLevel": 3,
+    "description": "Бывший полицейский. Связан с Линой и старым служебным оружием."
+  },
+  {
+    "id": "ryan-wallace",
+    "name": "Райан Уоллес",
+    "role": "Несовершеннолетний",
+    "age": "13 лет",
+    "photo": "ryan-wallace.png",
+    "unlockLevel": 9,
+    "description": "Сын Марка Уоллеса. Его роль раскрывается ближе к финалу."
+  },
+  {
+    "id": "sarah-coleman",
+    "name": "Сара Коулман",
+    "role": "Подозреваемая",
+    "age": "17 лет",
+    "photo": "sarah-coleman.png",
+    "unlockLevel": 4,
+    "description": "Новая девушка Кайла. Участвовала в конфликте с Линой."
+  },
+  {
+    "id": "kyle-bennett",
+    "name": "Кайл Беннет",
+    "role": "Подозреваемый",
+    "age": "18 лет",
+    "photo": "kyle-bennett.png",
+    "unlockLevel": 4,
+    "description": "Бывший парень Лины. Был рядом с ней в день убийства."
+  },
+  {
+    "id": "betty-reed",
+    "name": "Бетти Рид",
+    "role": "Свидетель",
+    "age": "15 лет",
+    "photo": "betty-reed.png",
+    "unlockLevel": 4,
+    "description": "Дочь Авы Рид. Видела конфликт Лины, Сары и Кайла."
+  },
+  {
+    "id": "thomas-jones",
+    "name": "Томас Джонс",
+    "role": "Священник",
+    "age": "45 лет",
+    "photo": "thomas-jones.png",
+    "unlockLevel": 6,
+    "description": "Последним подвозил Лину вечером перед смертью."
+  },
+  {
+    "id": "thomas-hill",
+    "name": "Томас Хилл",
+    "role": "Задержанный",
+    "age": "—",
+    "photo": "thomas-hill.png",
+    "unlockLevel": 8,
+    "description": "Фигурант дела о похищениях. Связан с синим фургоном."
+  }
+]
