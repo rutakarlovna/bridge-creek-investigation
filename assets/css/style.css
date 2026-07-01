@@ -639,13 +639,6 @@ footer {
   justify-content: space-between;
 }
 
-.document-frame {
-  flex: 1;
-  width: 100%;
-  border: none;
-  background: white;
-}
-
 .close-doc {
   background: #7f1d1d;
 }
