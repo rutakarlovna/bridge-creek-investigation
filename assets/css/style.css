@@ -611,3 +611,41 @@ footer {
   color: #475569;
   margin-bottom: 10px;
 }
+.document-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.document-window {
+  width: 90%;
+  max-width: 900px;
+  height: 85vh;
+  background: #0f172a;
+  border: 1px solid #2563eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.document-header {
+  padding: 14px 18px;
+  background: #020617;
+  border-bottom: 1px solid #2563eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.document-frame {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: white;
+}
+
+.close-doc {
+  background: #7f1d1d;
+}
