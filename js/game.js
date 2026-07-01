@@ -76,3 +76,12 @@ async function loadSuspects() {
     }
   });
 }
+function updateDesktopProgress() {
+  const progressText = document.getElementById("progressText");
+  const level = getProgress();
+  const percent = level * 10;
+
+  if (progressText) {
+    progressText.textContent = percent + "%";
+  }
+}

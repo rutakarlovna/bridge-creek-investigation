@@ -6,7 +6,10 @@
   <title>Рабочий стол детектива</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
+<script src="../js/game.js"></script>
+<script>
+  updateDesktopProgress();
+</script>
 <body>
 
 <header>
@@ -25,7 +28,7 @@
   <h1>Рабочий стол детектива</h1>
 
   <div class="note">
-    Получено материалов: 10%. Новые разделы будут открываться после ввода кодов доступа.
+   Получено материалов: <span id="progressText">10%</span>. Новые разделы будут открываться после ввода кодов доступа.
   </div>
 
   <br>
