@@ -4,34 +4,191 @@
     "title": "Первичный полицейский отчёт",
     "type": "REPORT",
     "status": "Доступно",
-    "description": "Первый отчёт по найденному телу у реки."
+    "description": "Первый рапорт о найденном теле девушки.",
+    "file": "assets/documents/report-01.pdf"
+  },
+  {
+    "level": 1,
+    "title": "Газетная статья об Эмме Стейл",
+    "type": "NEWS",
+    "status": "Доступно",
+    "description": "Статья о пропавшей год назад Эмме Стейл.",
+    "file": "assets/documents/newspaper-emma.pdf"
   },
   {
     "level": 2,
     "title": "Отчёт о вскрытии",
     "type": "AUTOPSY",
     "status": "Доступно",
-    "description": "Причина смерти: огнестрельное ранение."
+    "description": "Причина смерти и выводы судебного эксперта.",
+    "file": "assets/documents/autopsy-report.pdf"
+  },
+  {
+    "level": 2,
+    "title": "Фотографии места преступления",
+    "type": "PHOTO",
+    "status": "Доступно",
+    "description": "Фотографии места обнаружения тела.",
+    "file": "assets/documents/crime-scene.pdf"
   },
   {
     "level": 2,
     "title": "Разбитый телефон Лины",
     "type": "DIGITAL",
     "status": "На экспертизе",
-    "description": "Телефон повреждён. Данные частично восстановлены."
+    "description": "Телефон найден повреждённым.",
+    "file": "assets/documents/broken-phone.pdf"
+  },
+  {
+    "level": 3,
+    "title": "Телефон Лины",
+    "type": "PHONE",
+    "status": "Восстановлено",
+    "description": "Полная цифровая копия телефона.",
+    "file": "assets/documents/lina-phone.pdf"
   },
   {
     "level": 3,
     "title": "Переписка с Марком",
-    "type": "PHONE",
-    "status": "Восстановлено",
-    "description": "Сообщения указывают на шантаж."
+    "type": "MESSAGE",
+    "status": "Доступно",
+    "description": "Сообщения между Линой и Марком Уоллесом.",
+    "file": "assets/documents/messages-mark.pdf"
+  },
+  {
+    "level": 3,
+    "title": "Медицинские документы ребёнка",
+    "type": "MEDICAL",
+    "status": "Доступно",
+    "description": "История болезни ребёнка Лины.",
+    "file": "assets/documents/baby-medical.pdf"
   },
   {
     "level": 4,
-    "title": "Показания Бетти",
+    "title": "Допрос Сары Коулман",
     "type": "INTERVIEW",
     "status": "Доступно",
-    "description": "Бетти сообщает об избиении Лины."
+    "description": "Полный протокол допроса Сары.",
+    "file": "assets/documents/interview-sarah.pdf"
+  },
+  {
+    "level": 4,
+    "title": "Показания Бетти Рид",
+    "type": "INTERVIEW",
+    "status": "Доступно",
+    "description": "Бетти рассказывает об избиении Лины.",
+    "file": "assets/documents/interview-betty.pdf"
+  },
+  {
+    "level": 4,
+    "title": "Видео с камеры наблюдения",
+    "type": "VIDEO",
+    "status": "Доступно",
+    "description": "Лина садится в автомобиль священника.",
+    "file": "assets/documents/cctv-priest.mp4"
+  },
+  {
+    "level": 5,
+    "title": "Медицинский отчёт Кайла",
+    "type": "MEDICAL",
+    "status": "Доступно",
+    "description": "Состояние Кайла после огнестрельного ранения.",
+    "file": "assets/documents/kyle-medical.pdf"
+  },
+  {
+    "level": 5,
+    "title": "Осмотр автомобиля Кайла",
+    "type": "REPORT",
+    "status": "Доступно",
+    "description": "Следы внутри автомобиля.",
+    "file": "assets/documents/kyle-car.pdf"
+  },
+  {
+    "level": 6,
+    "title": "Осмотр велосипеда",
+    "type": "FORENSICS",
+    "status": "Доступно",
+    "description": "Следы и отпечатки на велосипеде.",
+    "file": "assets/documents/bicycle-report.pdf"
+  },
+  {
+    "level": 6,
+    "title": "Отпечатки пальцев",
+    "type": "FORENSICS",
+    "status": "Доступно",
+    "description": "Сравнение отпечатков Лины и Томаса Джонса.",
+    "file": "assets/documents/fingerprints.pdf"
+  },
+  {
+    "level": 7,
+    "title": "Допрос Томаса Джонса",
+    "type": "INTERVIEW",
+    "status": "Доступно",
+    "description": "Священник рассказывает о последних минутах встречи.",
+    "file": "assets/documents/interview-thomas-jones.pdf"
+  },
+  {
+    "level": 7,
+    "title": "Баллистическая экспертиза",
+    "type": "FORENSICS",
+    "status": "Доступно",
+    "description": "Пуля выпущена из старого полицейского пистолета.",
+    "file": "assets/documents/ballistics.pdf"
+  },
+  {
+    "level": 8,
+    "title": "Дело Томаса Хилла",
+    "type": "CASE",
+    "status": "Доступно",
+    "description": "Материалы по делу о похищениях девушек.",
+    "file": "assets/documents/thomas-hill-case.pdf"
+  },
+  {
+    "level": 8,
+    "title": "Газетная статья о задержании",
+    "type": "NEWS",
+    "status": "Доступно",
+    "description": "Публикация о задержании Томаса Хилла.",
+    "file": "assets/documents/newspaper-hill.pdf"
+  },
+  {
+    "level": 9,
+    "title": "ДНК-экспертиза",
+    "type": "DNA",
+    "status": "Доступно",
+    "description": "Результаты анализа подтверждают, что Марк — отец ребёнка.",
+    "file": "assets/documents/dna-report.pdf"
+  },
+  {
+    "level": 9,
+    "title": "Допрос Марка Уоллеса",
+    "type": "INTERVIEW",
+    "status": "Доступно",
+    "description": "Признание Марка и противоречия в показаниях.",
+    "file": "assets/documents/interview-mark.pdf"
+  },
+  {
+    "level": 9,
+    "title": "Запись камеры из сарая",
+    "type": "VIDEO",
+    "status": "Доступно",
+    "description": "Райан берёт пистолет.",
+    "file": "assets/documents/cctv-shed.mp4"
+  },
+  {
+    "level": 10,
+    "title": "Допрос Райана Уоллеса",
+    "type": "INTERVIEW",
+    "status": "Доступно",
+    "description": "Финальное признание Райана.",
+    "file": "assets/documents/interview-ryan.pdf"
+  },
+  {
+    "level": 10,
+    "title": "Заключительный отчёт детектива",
+    "type": "REPORT",
+    "status": "Доступно",
+    "description": "Итоговое заключение по делу BC-2025-017.",
+    "file": "assets/documents/final-report.pdf"
   }
 ]
