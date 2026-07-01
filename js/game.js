@@ -90,3 +90,27 @@ function resetProgress() {
   alert("Прогресс сброшен. Сейчас сайт вернётся к началу расследования.");
   location.reload();
 }
+function updateLockedSections() {
+  const level = getProgress();
+  const sections = document.querySelectorAll(".locked-section");
+
+  sections.forEach(section => {
+    const unlockLevel = Number(section.dataset.unlock);
+    const tag = section.querySelector(".tag");
+    const button = section.querySelector(".section-button");
+
+    if (level >= unlockLevel) {
+      section.classList.remove("locked-card");
+
+      if (tag) {
+        tag.textContent = "ДОСТУПНО";
+        tag.className = "tag blue";
+      }
+
+      if (button) {
+        button.disabled = false;
+        button.textContent = "Открыть";
+      }
+    }
+  });
+}
