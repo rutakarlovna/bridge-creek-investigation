@@ -18,21 +18,26 @@
 
     <div class="terminal-line"></div>
 
-    <p>Введите код доступа из конверта.</p>
+    <p>Введите код доступа из конверта, чтобы открыть новые материалы расследования.</p>
 
     <br>
 
-   <input id="accessCode" class="access-input" type="text" placeholder="ENTER ACCESS CODE">
+    <input id="accessCode" class="access-input" type="text" placeholder="ENTER ACCESS CODE">
 
-   <button onclick="checkAccessCode()">Проверить код</button>
+    <button onclick="checkAccessCode()">Проверить код</button>
+    <button onclick="location.href='desktop.html'">Вернуться на рабочий стол</button>
+
+    <div id="accessResult"></div>
 
     <div class="terminal-footer">
-      Система разблокировки будет подключена на следующем этапе.
+      Все попытки доступа фиксируются в системе BCPD.
     </div>
 
- <div id="accessResult"></div></section>
+  </section>
 
 </main>
 
-<script src="../js/game.js"></script></body>
+<script src="../js/game.js"></script>
+
+</body>
 </html>
