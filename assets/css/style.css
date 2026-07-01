@@ -771,3 +771,47 @@ footer {
 .lab-card h2 {
   margin-top: 12px;
 }
+.camera-list {
+  display: grid;
+  gap: 18px;
+}
+
+.camera-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  background: #0f172a;
+  border: 1px solid #1e3a8a;
+  padding: 20px;
+}
+
+.camera-preview {
+  min-height: 120px;
+  background:
+    linear-gradient(rgba(15,23,42,0.2), rgba(15,23,42,0.9)),
+    repeating-linear-gradient(
+      0deg,
+      #020617,
+      #020617 4px,
+      #0f172a 4px,
+      #0f172a 8px
+    );
+  border: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60a5fa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.locked-preview {
+  opacity: 0.45;
+  filter: blur(1px);
+}
+
+@media (max-width: 750px) {
+  .camera-card {
+    grid-template-columns: 1fr;
+  }
+}

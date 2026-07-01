@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Камеры</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="os-body">
+
+<div class="os-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      BCPD
+      <span>CCTV Archive</span>
+    </div>
+
+    <nav class="sidebar-menu">
+      <a href="desktop.html">Рабочий стол</a>
+      <a href="../evidence.html">Улики</a>
+      <a href="../suspects.html">Подозреваемые</a>
+      <a href="access.html">Ввести код</a>
+    </nav>
+  </aside>
+
+  <main class="workspace">
+
+    <div class="topbar">
+      <div>
+        <h1>Архив камер</h1>
+        <p>Записи наблюдения по делу BC-2025-017</p>
+      </div>
+      <div class="progress-box">CCTV</div>
+    </div>
+
+    <section class="camera-list">
+
+      <div class="camera-card">
+        <div class="camera-preview">21:32</div>
+        <div>
+          <span class="tag blue">ДОСТУПНО</span>
+          <h2>Церковная дорога</h2>
+          <p>Лина садится в автомобиль Томаса Джонса.</p>
+          <button onclick="location.href='../evidence.html'">Открыть материал</button>
+        </div>
+      </div>
+
+      <div class="camera-card">
+        <div class="camera-preview locked-preview">22:15</div>
+        <div>
+          <span class="tag gray">ЗАБЛОКИРОВАНО</span>
+          <h2>Машина Кайла</h2>
+          <p>Запись будет доступна после следующего конверта.</p>
+          <button disabled>Недоступно</button>
+        </div>
+      </div>
+
+      <div class="camera-card">
+        <div class="camera-preview locked-preview">20:00</div>
+        <div>
+          <span class="tag gray">ЗАБЛОКИРОВАНО</span>
+          <h2>Сарай Уоллесов</h2>
+          <p>Запись скрыта до финальных материалов.</p>
+          <button disabled>Недоступно</button>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+</html>
