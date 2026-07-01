@@ -109,7 +109,10 @@ function updateLockedSections() {
 
       if (button) {
         button.disabled = false;
-        button.textContent = "Открыть";
+button.textContent = "Открыть";
+button.onclick = function () {
+  location.href = button.dataset.link;
+};
       }
     }
   });
