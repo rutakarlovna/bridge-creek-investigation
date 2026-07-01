@@ -584,3 +584,30 @@ footer {
   margin-top: 8px;
   color: #93c5fd;
 }
+.news-list {
+  display: grid;
+  gap: 18px;
+}
+
+.news-card {
+  background: #f8fafc;
+  color: #111827;
+  padding: 28px;
+  border-left: 8px solid #1e3a8a;
+  font-family: Georgia, serif;
+}
+
+.news-card h2 {
+  color: #111827;
+  font-size: 28px;
+}
+
+.news-card p {
+  color: #1f2937;
+}
+
+.news-date,
+.news-source {
+  color: #475569;
+  margin-bottom: 10px;
+}

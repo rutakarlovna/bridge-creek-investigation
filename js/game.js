@@ -174,3 +174,27 @@ async function loadEvidence() {
     }
   });
 }
+async function loadNews() {
+  const list = document.getElementById("newsList");
+  if (!list) return;
+
+  const progress = getProgress();
+
+  const response = await fetch("../data/news.json");
+  const news = await response.json();
+
+  list.innerHTML = "";
+
+  news.forEach(item => {
+    if (item.level <= progress) {
+      list.innerHTML += `
+        <article class="news-card">
+          <div class="news-date">${item.date}</div>
+          <h2>${item.title}</h2>
+          <p class="news-source">${item.source}</p>
+          <p>${item.text}</p>
+        </article>
+      `;
+    }
+  });
+}
