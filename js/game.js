@@ -117,3 +117,28 @@ button.onclick = function () {
     }
   });
 }
+async function loadTimeline() {
+  const list = document.getElementById("timelineList");
+  if (!list) return;
+
+  const progress = getProgress();
+
+  const response = await fetch("../data/timeline.json");
+  const timeline = await response.json();
+
+  list.innerHTML = "";
+
+  timeline.forEach(item => {
+    if (item.level <= progress) {
+      list.innerHTML += `
+        <div class="journal-item">
+          <div class="journal-time">${item.time}</div>
+          <div>
+            <h3>${item.title}</h3>
+            <p>${item.text}</p>
+          </div>
+        </div>
+      `;
+    }
+  });
+}

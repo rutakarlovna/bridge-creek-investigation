@@ -93,7 +93,10 @@
       </div>
 
     </section>
-
+<section class="case-journal">
+  <h2>Журнал расследования</h2>
+  <div id="timelineList"></div>
+</section>
     <button class="test-reset" onclick="resetProgress()">Сбросить прогресс теста</button>
 
   </main>
@@ -104,6 +107,7 @@
 <script>
   updateDesktopProgress();
   updateLockedSections();
+  loadTimeline();
 </script>
 
 </body>
