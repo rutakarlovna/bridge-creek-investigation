@@ -1,60 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Дело Лины Харпер</title>
-
-<style>
-body{
-background:#0b1220;
-color:white;
-font-family:Arial;
-padding:40px;
-}
-
-.card{
-background:#111827;
-padding:30px;
-border-radius:12px;
-max-width:900px;
-margin:auto;
-}
-
-a{
-color:#60a5fa;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дело Лины Харпер</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-<div class="card">
+<header>
+  <div class="logo">BRIDGE CREEK POLICE DEPARTMENT</div>
+  <div class="subtitle">Case File BC-2025-017</div>
+</header>
 
-<h1>ДЕЛО BC-2025-017</h1>
-
-<br>
-
-<h2>Лина Харпер</h2>
-
-<p>Возраст: 17 лет</p>
-
-<p>Статус: Убийство</p>
-
-<p>Тело найдено возле реки утром.</p>
-
-<p>Время смерти: 21:30–22:30</p>
-
-<p>
-Обнаружены следы перемещения тела.
-Телефон разбит.
-Место убийства неизвестно.
-</p>
-
-<br>
-
-<a href="index.html">← Вернуться в базу</a>
-
+<div class="warning">
+  АКТИВНОЕ РАССЛЕДОВАНИЕ • УБИЙСТВО НЕСОВЕРШЕННОЛЕТНЕЙ
 </div>
+
+<main class="container">
+
+  <a class="back" href="pages/desktop.html">← Вернуться на рабочий стол</a>
+
+  <section class="case-hero">
+
+    <div>
+      <span class="tag red">CASE OPEN</span>
+      <h1>Лина Харпер</h1>
+      <p class="case-subtitle">17 лет • найдена мёртвой у реки • дело № BC-2025-017</p>
+
+      <div class="case-data">
+        <p><strong>Статус:</strong> убийство</p>
+        <p><strong>Причина смерти:</strong> огнестрельное ранение</p>
+        <p><strong>Время смерти:</strong> 21:30–22:30</p>
+        <p><strong>Тело:</strong> перемещено после смерти</p>
+        <p><strong>Ключевая улика:</strong> разбитый телефон</p>
+      </div>
+    </div>
+
+    <img class="case-photo" src="assets/images/lina-harper.png" alt="Лина Харпер">
+
+  </section>
+
+  <section class="case-section">
+    <h2>Краткое описание дела</h2>
+    <p>
+      Утром полиция Бридж-Крика получила сообщение о найденном теле девушки у реки.
+      Личность установлена: Лина Харпер, 17 лет. Первичный осмотр показывает, что тело
+      было перемещено, а убийство произошло в другом месте.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Основные выводы</h2>
+
+    <div class="case-points">
+      <div>Тело обнаружено у реки</div>
+      <div>Телефон Лины разбит</div>
+      <div>Следов борьбы на месте обнаружения нет</div>
+      <div>Причина смерти — выстрел</div>
+      <div>Расследование связано с исчезновением Эммы Стейл</div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Хронология</h2>
+
+    <div class="timeline-static">
+      <div><strong>18:40</strong> Лина уезжает из дома на велосипеде</div>
+      <div><strong>19:00</strong> встреча в лесу</div>
+      <div><strong>19:40</strong> Лина уходит после конфликта живой</div>
+      <div><strong>21:30</strong> Лина садится в машину священника</div>
+      <div><strong>~22:00</strong> предположительное время убийства</div>
+      <div><strong>Ночь</strong> тело перемещено к реке</div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Связанные разделы</h2>
+
+    <div class="case-links">
+      <button onclick="location.href='suspects.html'">Подозреваемые</button>
+      <button onclick="location.href='evidence.html'">Архив улик</button>
+      <button onclick="location.href='pages/news.html'">Газетный архив</button>
+      <button onclick="location.href='pages/access.html'">Ввести код</button>
+    </div>
+  </section>
+
+</main>
 
 </body>
 </html>
