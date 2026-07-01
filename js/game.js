@@ -100,7 +100,7 @@ function updateLockedSections() {
     const button = section.querySelector(".section-button");
 
     if (level >= unlockLevel) {
-      section.classList.remove("locked-card");
+     section.classList.add("unlocked");
 
       if (tag) {
         tag.textContent = "ДОСТУПНО";

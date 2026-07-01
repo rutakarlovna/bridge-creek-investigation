@@ -6,94 +6,105 @@
   <title>Рабочий стол детектива</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
+<body class="os-body">
+
+<div class="os-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      BCPD
+      <span>Police Database</span>
+    </div>
+
+    <nav class="sidebar-menu">
+      <a class="active" href="desktop.html">Рабочий стол</a>
+      <a href="../case-lina.html">Дело</a>
+      <a href="../suspects.html">Подозреваемые</a>
+      <a href="../evidence.html">Улики</a>
+      <a href="access.html">Ввести код</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      Detective: AVA REED<br>
+      Access: LEVEL II
+    </div>
+  </aside>
+
+  <main class="workspace">
+
+    <div class="topbar">
+      <div>
+        <h1>Дело BC-2025-017</h1>
+        <p>Убийство Лины Харпер • Активное расследование</p>
+      </div>
+
+      <div class="progress-box">
+        Материалы: <span id="progressText">10%</span>
+      </div>
+    </div>
+
+    <section class="system-alert">
+      Новые разделы открываются после ввода кодов доступа из конвертов.
+    </section>
+
+    <section class="app-grid">
+
+      <div class="app-card available">
+        <div class="app-icon">📁</div>
+        <h2>Дело</h2>
+        <p>Основная информация, хронология, первичный рапорт.</p>
+        <button onclick="location.href='../case-lina.html'">Открыть</button>
+      </div>
+
+      <div class="app-card available">
+        <div class="app-icon">👤</div>
+        <h2>Подозреваемые</h2>
+        <p>База лиц, связанных с делом Лины Харпер.</p>
+        <button onclick="location.href='../suspects.html'">Открыть</button>
+      </div>
+
+      <div class="app-card locked-section" data-unlock="3">
+        <div class="app-icon">📱</div>
+        <h2>Телефон Лины</h2>
+        <p>Сообщения, звонки, контакты и цифровая экспертиза.</p>
+        <button disabled class="section-button" data-link="phone.html">Недоступно</button>
+      </div>
+
+      <div class="app-card locked-section" data-unlock="6">
+        <div class="app-icon">🧬</div>
+        <h2>Лаборатория</h2>
+        <p>ДНК, отпечатки, баллистика и экспертные отчёты.</p>
+        <button disabled class="section-button" data-link="lab.html">Недоступно</button>
+      </div>
+
+      <div class="app-card locked-section" data-unlock="4">
+        <div class="app-icon">🎥</div>
+        <h2>Камеры</h2>
+        <p>Записи наблюдения и видеоматериалы.</p>
+        <button disabled class="section-button" data-link="cctv.html">Недоступно</button>
+      </div>
+
+      <div class="app-card available">
+        <div class="app-icon">🔐</div>
+        <h2>Код доступа</h2>
+        <p>Ввести код из нового конверта и открыть материалы.</p>
+        <button onclick="location.href='access.html'">Ввести код</button>
+      </div>
+
+    </section>
+
+    <button class="test-reset" onclick="resetProgress()">Сбросить прогресс теста</button>
+
+  </main>
+
+</div>
+
 <script src="../js/game.js"></script>
 <script>
   updateDesktopProgress();
   updateLockedSections();
 </script>
-<body>
-
-<header>
-  <div class="logo">BRIDGE CREEK POLICE DEPARTMENT</div>
-  <div class="subtitle">Detective Ava Reed Workstation</div>
-</header>
-
-<div class="warning">
-  ДЕЛО BC-2025-017 • АКТИВНОЕ РАССЛЕДОВАНИЕ
-</div>
-<br>
-<button onclick="resetProgress()">Сбросить прогресс теста</button>
-<main class="container">
-
-  <a class="back" href="../index.html">← Выйти из системы</a>
-
-  <h1>Рабочий стол детектива</h1>
-
-  <div class="note">
-   Получено материалов: <span id="progressText">10%</span>. Новые разделы будут открываться после ввода кодов доступа.
-  </div>
-
-  <br>
-
-  <div class="grid">
-
-    <div class="card">
-      <div class="info">
-        <span class="tag blue">ДОСТУПНО</span>
-        <h2>📁 Дело</h2>
-        <p>Основная информация по делу Лины Харпер.</p>
-        <button onclick="location.href='../case-lina.html'">Открыть</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="info">
-        <span class="tag blue">ДОСТУПНО</span>
-        <h2>👤 Подозреваемые</h2>
-        <p>База лиц, связанных с расследованием.</p>
-        <button onclick="location.href='../suspects.html'">Открыть</button>
-      </div>
-    </div>
-
-    <div class="card locked-section" data-unlock="3">
-      <div class="info">
-        <span class="tag gray">ЗАБЛОКИРОВАНО</span>
-        <h2>📱 Телефон Лины</h2>
-        <p>Доступ появится после получения цифровой экспертизы.</p>
-        <button disabled class="section-button">Недоступно</button><button disabled class="section-button" data-link="phone.html">Недоступно</button>
-      </div>
-    </div>
-
-    <div class="card locked-section" data-unlock="6">
-      <div class="info">
-        <span class="tag gray">ЗАБЛОКИРОВАНО</span>
-        <h2>🧬 Лаборатория</h2>
-        <p>ДНК, отпечатки, баллистика.</p>
-       <button disabled class="section-button" data-link="lab.html">Недоступно</button>
-      </div>
-    </div>
-
-    <div class="card locked-section" data-unlock="4">
-      <div class="info">
-        <span class="tag gray">ЗАБЛОКИРОВАНО</span>
-        <h2>🎥 Камеры</h2>
-        <p>Записи наблюдения и видеоматериалы.</p>
-       <button disabled class="section-button" data-link="cctv.html">Недоступно</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="info">
-        <span class="tag gray">ЗАБЛОКИРОВАНО</span>
-        <h2>🔐 Ввести код</h2>
-        <p>Открыть новые материалы расследования.</p>
-        <button onclick="location.href='access.html'">Ввести код</button>
-      </div>
-    </div>
-
-  </div>
-
-</main>
 
 </body>
 </html>
