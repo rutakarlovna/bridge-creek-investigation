@@ -73,14 +73,15 @@ async function loadSuspects() {
       `;
     } else {
       grid.innerHTML += `
-        <div class="card locked-card">
-          <div class="info">
-            <span class="tag gray">ЗАБЛОКИРОВАНО</span>
-            <h2>Личность не установлена</h2>
-            <p>Данные будут доступны после получения новых материалов расследования.</p>
-          </div>
-        </div>
-      `;
+  <div class="card locked-card suspect-locked">
+    <div class="locked-silhouette">?</div>
+    <div class="info">
+      <span class="tag gray">ЗАБЛОКИРОВАНО</span>
+      <h2>Личность не установлена</h2>
+      <p>Досье скрыто. Требуется новый код доступа.</p>
+    </div>
+  </div>
+`;
     }
   });
 }
