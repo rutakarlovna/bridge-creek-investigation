@@ -4,191 +4,159 @@
     "title": "Первичный полицейский отчёт",
     "type": "REPORT",
     "status": "Доступно",
-    "description": "Первый рапорт о найденном теле девушки.",
-    "file": "assets/documents/report-01.pdf"
+    "description": "Полный первичный отчёт по делу Лины Харпер.",
+    "file": "assets/documents/reports/1-police-report-complete.png"
   },
   {
     "level": 1,
-    "title": "Газетная статья об Эмме Стейл",
+    "title": "Газетная статья",
     "type": "NEWS",
     "status": "Доступно",
-    "description": "Статья о пропавшей год назад Эмме Стейл.",
-    "file": "assets/documents/newspaper-emma.pdf"
+    "description": "Публикация Bridge Creek Daily.",
+    "file": "assets/documents/newspapers/newspaper.png"
   },
   {
     "level": 2,
-    "title": "Отчёт о вскрытии",
-    "type": "AUTOPSY",
+    "title": "Судебно-медицинский отчёт",
+    "type": "MEDICAL",
     "status": "Доступно",
-    "description": "Причина смерти и выводы судебного эксперта.",
-    "file": "assets/documents/autopsy-report.pdf"
+    "description": "Отчёт эксперта по телу Лины.",
+    "file": "assets/documents/medical/medical-report-Lina-body.png"
   },
   {
     "level": 2,
-    "title": "Фотографии места преступления",
+    "title": "Фото места преступления",
     "type": "PHOTO",
     "status": "Доступно",
-    "description": "Фотографии места обнаружения тела.",
-    "file": "assets/documents/crime-scene.pdf"
-  },
-  {
-    "level": 2,
-    "title": "Разбитый телефон Лины",
-    "type": "DIGITAL",
-    "status": "На экспертизе",
-    "description": "Телефон найден повреждённым.",
-    "file": "assets/documents/broken-phone.pdf"
+    "description": "Фотография места обнаружения тела.",
+    "file": "assets/documents/forensics/crime-scene-photo.png"
   },
   {
     "level": 3,
-    "title": "Телефон Лины",
+    "title": "Переписка с Марком Уоллесом",
     "type": "PHONE",
     "status": "Восстановлено",
-    "description": "Полная цифровая копия телефона.",
-    "file": "assets/documents/lina-phone.pdf"
+    "description": "Переписка Лины с Марком.",
+    "file": "assets/documents/phone/correspondence-mark-wallace.png"
   },
   {
     "level": 3,
-    "title": "Переписка с Марком",
-    "type": "MESSAGE",
-    "status": "Доступно",
-    "description": "Сообщения между Линой и Марком Уоллесом.",
-    "file": "assets/documents/messages-mark.pdf"
-  },
-  {
-    "level": 3,
-    "title": "Медицинские документы ребёнка",
-    "type": "MEDICAL",
-    "status": "Доступно",
-    "description": "История болезни ребёнка Лины.",
-    "file": "assets/documents/baby-medical.pdf"
+    "title": "Выписка звонков",
+    "type": "PHONE",
+    "status": "Восстановлено",
+    "description": "Журнал звонков с телефона Лины.",
+    "file": "assets/documents/reports/call-history.png"
   },
   {
     "level": 4,
-    "title": "Допрос Сары Коулман",
+    "title": "Допрос Сары",
     "type": "INTERVIEW",
     "status": "Доступно",
-    "description": "Полный протокол допроса Сары.",
-    "file": "assets/documents/interview-sarah.pdf"
+    "description": "Протокол допроса Сары Коулман.",
+    "file": "assets/documents/interviews/interviews-sarah.png"
   },
   {
     "level": 4,
-    "title": "Показания Бетти Рид",
+    "title": "Допрос Бетти Рид",
     "type": "INTERVIEW",
     "status": "Доступно",
-    "description": "Бетти рассказывает об избиении Лины.",
-    "file": "assets/documents/interview-betty.pdf"
+    "description": "Показания Бетти о конфликте с Линой.",
+    "file": "assets/documents/interviews/interviews-betty-reed.png"
   },
   {
     "level": 4,
-    "title": "Видео с камеры наблюдения",
-    "type": "VIDEO",
+    "title": "Камера: Лина уезжает с Томасом",
+    "type": "CCTV",
     "status": "Доступно",
-    "description": "Лина садится в автомобиль священника.",
-    "file": "assets/documents/cctv-priest.mp4"
+    "description": "Видео с камеры наблюдения.",
+    "file": "assets/documents/cctv/lina-is-leaving-with-thomas.mp4"
   },
   {
     "level": 5,
-    "title": "Медицинский отчёт Кайла",
+    "title": "Кайл в коме",
     "type": "MEDICAL",
     "status": "Доступно",
-    "description": "Состояние Кайла после огнестрельного ранения.",
-    "file": "assets/documents/kyle-medical.pdf"
-  },
-  {
-    "level": 5,
-    "title": "Осмотр автомобиля Кайла",
-    "type": "REPORT",
-    "status": "Доступно",
-    "description": "Следы внутри автомобиля.",
-    "file": "assets/documents/kyle-car.pdf"
+    "description": "Медицинский отчёт по состоянию Кайла.",
+    "file": "assets/documents/medical/kyle-medical-report-in-coma.png"
   },
   {
     "level": 6,
-    "title": "Осмотр велосипеда",
+    "title": "Велосипед с отпечатками",
     "type": "FORENSICS",
     "status": "Доступно",
-    "description": "Следы и отпечатки на велосипеде.",
-    "file": "assets/documents/bicycle-report.pdf"
-  },
-  {
-    "level": 6,
-    "title": "Отпечатки пальцев",
-    "type": "FORENSICS",
-    "status": "Доступно",
-    "description": "Сравнение отпечатков Лины и Томаса Джонса.",
-    "file": "assets/documents/fingerprints.pdf"
+    "description": "Осмотр велосипеда Лины.",
+    "file": "assets/documents/forensics/bicycle-fingerprints.png"
   },
   {
     "level": 7,
     "title": "Допрос Томаса Джонса",
     "type": "INTERVIEW",
     "status": "Доступно",
-    "description": "Священник рассказывает о последних минутах встречи.",
-    "file": "assets/documents/interview-thomas-jones.pdf"
+    "description": "Показания священника.",
+    "file": "assets/documents/interviews/interviews-thomas-jones.png"
   },
   {
     "level": 7,
     "title": "Баллистическая экспертиза",
     "type": "FORENSICS",
     "status": "Доступно",
-    "description": "Пуля выпущена из старого полицейского пистолета.",
-    "file": "assets/documents/ballistics.pdf"
+    "description": "Экспертиза пули и оружия.",
+    "file": "assets/documents/forensics/balistics.png"
   },
   {
     "level": 8,
     "title": "Дело Томаса Хилла",
     "type": "CASE",
     "status": "Доступно",
-    "description": "Материалы по делу о похищениях девушек.",
-    "file": "assets/documents/thomas-hill-case.pdf"
-  },
-  {
-    "level": 8,
-    "title": "Газетная статья о задержании",
-    "type": "NEWS",
-    "status": "Доступно",
-    "description": "Публикация о задержании Томаса Хилла.",
-    "file": "assets/documents/newspaper-hill.pdf"
+    "description": "Материалы ветки с фургоном.",
+    "file": "assets/documents/interviews/branch-van-early-dossier-thomass-hill.png"
   },
   {
     "level": 9,
-    "title": "ДНК-экспертиза",
+    "title": "ДНК-образцы",
     "type": "DNA",
     "status": "Доступно",
-    "description": "Результаты анализа подтверждают, что Марк — отец ребёнка.",
-    "file": "assets/documents/dna-report.pdf"
+    "description": "Образцы ДНК для анализа.",
+    "file": "assets/documents/dna/dna-samples-for-analysis.png"
   },
   {
     "level": 9,
-    "title": "Допрос Марка Уоллеса",
+    "title": "Допрос Марка",
     "type": "INTERVIEW",
     "status": "Доступно",
-    "description": "Признание Марка и противоречия в показаниях.",
-    "file": "assets/documents/interview-mark.pdf"
+    "description": "Протокол допроса Марка Уоллеса.",
+    "file": "assets/documents/interviews/interviews-mark.png"
   },
   {
     "level": 9,
-    "title": "Запись камеры из сарая",
-    "type": "VIDEO",
+    "title": "Камера: Райан крадёт пистолет",
+    "type": "CCTV",
     "status": "Доступно",
-    "description": "Райан берёт пистолет.",
-    "file": "assets/documents/cctv-shed.mp4"
+    "description": "Видео из сарая Уоллесов.",
+    "file": "assets/documents/cctv/Ryan-steals-a-gun.mp4"
   },
   {
     "level": 10,
-    "title": "Допрос Райана Уоллеса",
-    "type": "INTERVIEW",
+    "title": "Финальный допрос Райана — часть 1",
+    "type": "FINAL",
     "status": "Доступно",
-    "description": "Финальное признание Райана.",
-    "file": "assets/documents/interview-ryan.pdf"
+    "description": "Финальный допрос Райана.",
+    "file": "assets/documents/final/Interview-with-Ryan-Finale1.png"
   },
   {
     "level": 10,
-    "title": "Заключительный отчёт детектива",
-    "type": "REPORT",
+    "title": "Финальный допрос Райана — часть 2",
+    "type": "FINAL",
     "status": "Доступно",
-    "description": "Итоговое заключение по делу BC-2025-017.",
-    "file": "assets/documents/final-report.pdf"
+    "description": "Продолжение финального допроса.",
+    "file": "assets/documents/final/Interview-with-Ryan-Finale2.png"
+  },
+  {
+    "level": 10,
+    "title": "Финальная газетная выписка",
+    "type": "NEWS",
+    "status": "Доступно",
+    "description": "Финальная публикация по делу.",
+    "file": "assets/documents/final/the-final-extract-from-the-newspaper.png"
   }
 ]

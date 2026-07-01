@@ -273,3 +273,34 @@ async function loadSuspectProfile() {
     </div>
   `;
 }
+function openDocument(filePath, title) {
+  const modal = document.getElementById("documentModal");
+  const viewer = document.getElementById("documentViewer");
+  const titleBox = document.getElementById("documentTitle");
+
+  titleBox.textContent = title;
+
+  const lower = filePath.toLowerCase();
+
+  if (lower.endsWith(".mp4")) {
+    viewer.innerHTML = `
+      <video controls autoplay class="document-video">
+        <source src="${filePath}" type="video/mp4">
+      </video>
+    `;
+  } else {
+    viewer.innerHTML = `
+      <img src="${filePath}" class="document-image" alt="${title}">
+    `;
+  }
+
+  modal.style.display = "flex";
+}
+
+function closeDocument() {
+  const modal = document.getElementById("documentModal");
+  const viewer = document.getElementById("documentViewer");
+
+  viewer.innerHTML = "";
+  modal.style.display = "none";
+}
