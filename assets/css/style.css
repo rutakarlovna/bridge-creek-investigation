@@ -745,3 +745,13 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+.suspect-meter {
+  background: #020617;
+  border: 1px solid #1e3a8a;
+  padding: 16px;
+  margin: 18px 0;
+}
+
+.suspect-meter .bar {
+  margin-top: 10px;
+}
