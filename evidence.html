@@ -1,55 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Улики</title>
-
-<style>
-
-body{
-background:#0b1220;
-color:white;
-font-family:Arial;
-padding:40px;
-}
-
-.file{
-background:#111827;
-padding:20px;
-margin-bottom:15px;
-border-radius:10px;
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Архив улик</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-<h1>АРХИВ УЛИК</h1>
+<header>
+  <div class="logo">BRIDGE CREEK POLICE DEPARTMENT</div>
+  <div class="subtitle">Evidence Archive</div>
+</header>
 
-<div class="file">
-📁 Отчёт о вскрытии
+<div class="warning">
+  АРХИВ УЛИК • ДОСТУП ОГРАНИЧЕН
 </div>
 
-<div class="file">
-📁 Камеры наблюдения
-</div>
+<main class="container">
 
-<div class="file">
-📁 Телефон Лины
-</div>
+  <a class="back" href="pages/desktop.html">← Вернуться на рабочий стол</a>
 
-<div class="file">
-📁 Отчёт баллистики
-</div>
+  <h1>Архив улик</h1>
 
-<div class="file">
-📁 Допрос свидетелей
-</div>
+  <div class="note">
+    Улики появляются по мере открытия конвертов.
+  </div>
 
-<br>
+  <br>
 
-<a href="index.html">← Назад</a>
+  <div id="evidenceList" class="evidence-list"></div>
+
+</main>
+
+<script src="js/game.js"></script>
+<script>
+  loadEvidence();
+</script>
 
 </body>
 </html>

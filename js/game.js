@@ -148,3 +148,29 @@ async function loadTimeline() {
     }
   });
 }
+async function loadEvidence() {
+  const list = document.getElementById("evidenceList");
+  if (!list) return;
+
+  const progress = getProgress();
+
+  const response = await fetch("data/evidence.json");
+  const evidence = await response.json();
+
+  list.innerHTML = "";
+
+  evidence.forEach(item => {
+    if (item.level <= progress) {
+      list.innerHTML += `
+        <div class="evidence-item">
+          <div class="evidence-type">${item.type}</div>
+          <div>
+            <h2>${item.title}</h2>
+            <p>${item.description}</p>
+            <span>${item.status}</span>
+          </div>
+        </div>
+      `;
+    }
+  });
+}
