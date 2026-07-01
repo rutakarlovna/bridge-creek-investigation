@@ -66,6 +66,7 @@ async function loadSuspects() {
             <h2>${person.name}</h2>
             <p><strong>Возраст:</strong> ${person.age}</p>
             <p>${person.description}</p>
+            <button onclick="openSuspect('${person.id}')">Открыть досье</button>
           </div>
         </div>
       `;
@@ -198,4 +199,43 @@ async function loadNews() {
       `;
     }
   });
+}
+function openSuspect(id) {
+  localStorage.setItem("selectedSuspect", id);
+  location.href = "pages/suspect-profile.html";
+}
+async function loadSuspectProfile() {
+  const box = document.getElementById("suspectProfile");
+  if (!box) return;
+
+  const id = localStorage.getItem("selectedSuspect");
+
+  const response = await fetch("../data/suspects.json");
+  const suspects = await response.json();
+
+  const person = suspects.find(item => item.id === id);
+
+  if (!person) {
+    box.innerHTML = "<p>Досье не найдено.</p>";
+    return;
+  }
+
+  box.innerHTML = `
+    <div class="profile-card">
+      <img src="../assets/images/${person.photo}" alt="${person.name}">
+      <div>
+        <span class="tag blue">${person.role}</span>
+        <h1>${person.name}</h1>
+        <p><strong>Возраст:</strong> ${person.age}</p>
+        <p>${person.description}</p>
+
+        <div class="case-section">
+          <h2>Статус в расследовании</h2>
+          <p>Данные обновляются по мере открытия новых материалов дела.</p>
+        </div>
+
+        <button onclick="location.href='../suspects.html'">Назад к базе лиц</button>
+      </div>
+    </div>
+  `;
 }

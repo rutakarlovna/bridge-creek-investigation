@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Досье</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="os-body">
+
+<div class="os-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      BCPD
+      <span>Person File</span>
+    </div>
+
+    <nav class="sidebar-menu">
+      <a href="desktop.html">Рабочий стол</a>
+      <a href="../suspects.html">Подозреваемые</a>
+      <a href="../evidence.html">Улики</a>
+    </nav>
+  </aside>
+
+  <main class="workspace">
+    <div id="suspectProfile"></div>
+  </main>
+
+</div>
+
+<script src="../js/game.js"></script>
+<script>
+  loadSuspectProfile();
+</script>
+
+</body>
+</html>
