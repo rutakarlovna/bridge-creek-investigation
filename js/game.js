@@ -85,3 +85,8 @@ function updateDesktopProgress() {
     progressText.textContent = percent + "%";
   }
 }
+function resetProgress() {
+  localStorage.removeItem("bridgeCreekProgress");
+  alert("Прогресс сброшен. Сейчас сайт вернётся к началу расследования.");
+  location.reload();
+}
