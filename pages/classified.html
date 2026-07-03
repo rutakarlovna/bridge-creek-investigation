@@ -58,6 +58,12 @@
 </div>
 
 <script src="../js/game.js"></script>
+<script>
+  if (localStorage.getItem("finalUnlocked") !== "true") {
+    alert("Доступ запрещён. Сначала вынесите заключение детектива.");
+    location.href = "final-decision.html";
+  }
+</script>
 
 </body>
 </html>
