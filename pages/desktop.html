@@ -49,17 +49,19 @@
     </section>
 
     <section class="app-grid">
+      
 
       <div class="app-card available">
         <div class="app-icon">📁</div>
         <h2>Дело</h2>
         <p>Основная информация, хронология, первичный рапорт.</p>
         <button onclick="location.href='../case-lina.html'">Открыть</button>
-        <div class="app-card available">
+        <div class="app-card locked-section" data-unlock="10">
   <div class="app-icon">⚖️</div>
   <h2>Финальное заключение</h2>
   <p>Выберите единственного виновного по делу Лины Харпер.</p>
-  <button onclick="location.href='final-decision.html'">Открыть</button>
+  <button disabled class="section-button" data-link="final-decision.html">Недоступно</button>
+  
 </div>
       </div>
 

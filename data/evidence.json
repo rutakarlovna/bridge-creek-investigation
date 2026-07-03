@@ -144,7 +144,7 @@
     "file": "assets/documents/cctv/Ryan-steals-a-gun.mp4"
   },
   {
-    "level": 10,
+    "level": 99,
     "title": "Финальный допрос Райана — часть 1",
     "type": "FINAL",
     "status": "Доступно",
@@ -152,7 +152,7 @@
     "file": "assets/documents/final/Interview-with-Ryan-Finale1.png"
   },
   {
-    "level": 10,
+    "level": 99,
     "title": "Финальный допрос Райана — часть 2",
     "type": "FINAL",
     "status": "Доступно",
@@ -160,7 +160,7 @@
     "file": "assets/documents/final/Interview-with-Ryan-Finale2.png"
   },
   {
-    "level": 10,
+    "level": 99,
     "title": "Финальная газетная выписка",
     "type": "NEWS",
     "status": "Доступно",
