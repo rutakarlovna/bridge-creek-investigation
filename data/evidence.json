@@ -48,13 +48,13 @@
   "file": "assets/documents/medical/lina-baby-medical-file.png"
 },
   {
-    "level": 3,
-    "title": "Выписка звонков",
-    "type": "PHONE",
-    "status": "Восстановлено",
-    "description": "Журнал звонков с телефона Лины.",
-    "file": "assets/documents/reports/call-history.png"
-  },
+  "level": 3,
+  "title": "Выписка звонков",
+  "type": "PHONE",
+  "status": "Восстановлено",
+  "description": "Журнал звонков с телефона Лины.",
+  "file": "assets/documents/reports/call-history.png"
+},
   {
     "level": 4,
     "title": "Допрос Сары",
