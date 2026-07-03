@@ -34,6 +34,34 @@ async function checkAccessCode() {
 
     if (found) {
       saveProgress(found.id);
+      if (found.id === 9) {
+    setTimeout(() => {
+        alert(
+`ВНИМАНИЕ
+
+Новые материалы противоречат текущей версии расследования.
+
+Рекомендуется повторно изучить все документы по делу перед вынесением окончательного заключения.
+
+Система BCPD.`
+        );
+    }, 500);
+}
+if (found.id === 10) {
+
+    setTimeout(() => {
+
+        alert(
+`ВСЕ ДОКАЗАТЕЛЬСТВА СОБРАНЫ.
+
+Система BCPD ожидает официального заключения детектива.
+
+После выбора подозреваемого изменить решение будет невозможно.`
+        );
+
+    },500);
+
+}
 
       result.innerHTML = `
         <div class="success-box">
@@ -323,21 +351,43 @@ function closeDocument() {
 }
 function submitDecision() {
   const selected = document.querySelector('input[name="killer"]:checked');
+  const reason = document.getElementById("decisionReason");
 
   if (!selected) {
     alert("Выберите подозреваемого.");
     return;
   }
 
+  if (!reason.value.trim()) {
+    alert("Сначала опишите вашу версию расследования.");
+    return;
+  }
+
   if (selected.value === "ryan") {
     localStorage.setItem("finalUnlocked", "true");
-
     alert("ДОСТУП РАЗРЕШЁН. Засекреченные материалы открыты.");
-
     location.href = "classified.html";
   } else {
     alert("Заключение не подтверждено. Доказательств недостаточно. Вернитесь к материалам дела.");
-
     location.href = "desktop.html";
   }
 }
+function updateSystemAlert() {
+
+    const alertBox = document.getElementById("systemAlert");
+
+    if (!alertBox) return;
+
+    const progress = getProgress();
+
+    if (progress >= 90) {
+
+        alertBox.innerHTML = `
+        ⚠ СИСТЕМА ОБНАРУЖИЛА ПРОТИВОРЕЧИЯ В РАССЛЕДОВАНИИ.<br><br>
+        Повторно изучите материалы дела перед вынесением окончательного заключения.
+        `;
+
+    }
+
+}
+updateSystemAlert();

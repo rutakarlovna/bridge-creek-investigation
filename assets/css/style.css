@@ -889,3 +889,14 @@ footer {
 .decision-actions button {
   min-width: 180px;
 }
+.decision-box textarea {
+  width: 100%;
+  min-height: 140px;
+  margin-top: 24px;
+  padding: 14px;
+  background: #020617;
+  border: 1px solid #2563eb;
+  color: white;
+  font-size: 16px;
+  resize: vertical;
+}
