@@ -118,7 +118,32 @@
     "status": "Доступно",
     "description": "Материалы ветки с фургоном.",
     "file": "assets/documents/interviews/branch-van-early-dossier-thomass-hill.png"
+    
   },
+  {
+  "level": 8,
+  "title": "Досье Томаса Хилла",
+  "type": "CASE",
+  "status": "Доступно",
+  "description": "Первичное досье по Томасу Хиллу и делу о пропавших девушках.",
+  "file": "assets/documents/interviews/branch-van-early-dossier-thomass-hill.png"
+},
+{
+  "level": 8,
+  "title": "Показания свидетелей по синему фургону",
+  "type": "REPORT",
+  "status": "Доступно",
+  "description": "Свидетели сообщают о синем фургоне, замеченном в районе исчезновений.",
+  "file": "assets/documents/reports/branch-van-report-witnesses.png"
+},
+{
+  "level": 8,
+  "title": "Отчёт о задержании Томаса Хилла",
+  "type": "REPORT",
+  "status": "Доступно",
+  "description": "Материалы задержания Томаса Хилла по делу о похищениях.",
+  "file": "assets/documents/reports/branch-van-report-thomas-detained.png"
+},
   {
     "level": 9,
     "title": "ДНК-образцы",
