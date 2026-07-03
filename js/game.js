@@ -16,37 +16,54 @@ async function checkAccessCode() {
 
   const code = input.value.trim().toUpperCase();
 
-  const response = await fetch("../data/envelopes.json");
-  const envelopes = await response.json();
+  if (!code) {
+    result.innerHTML = `<div class="error-box">Введите код доступа.</div>`;
+    return;
+  }
 
-  const found = envelopes.find(item => item.code.toUpperCase() === code);
+  try {
+    const response = await fetch("../data/envelopes.json?v=" + Date.now());
 
-  if (found) {
-    saveProgress(found.id);
+    if (!response.ok) {
+      throw new Error("Файл envelopes.json не найден");
+    }
 
-    result.innerHTML = `
-  <div class="success-box">
-    <h2>НОВЫЕ МАТЕРИАЛЫ ДОБАВЛЕНЫ</h2>
-    <h3>${found.title}</h3>
-    <p>${found.description}</p>
-    <p>Прогресс расследования: ${found.progress}%</p>
+    const envelopes = await response.json();
 
-    <ul class="unlock-list">
-      ${found.unlocks.map(item => `<li>✓ ${item}</li>`).join("")}
-    </ul>
+    const found = envelopes.find(item => item.code.toUpperCase() === code);
 
-    <button onclick="location.href='desktop.html'">Перейти к расследованию</button>
-  </div>
-`;
-  } else {
+    if (found) {
+      saveProgress(found.id);
+
+      result.innerHTML = `
+        <div class="success-box">
+          <h2>НОВЫЕ МАТЕРИАЛЫ ДОБАВЛЕНЫ</h2>
+          <h3>${found.title}</h3>
+          <p>${found.description}</p>
+          <p>Прогресс расследования: ${found.progress}%</p>
+
+          <ul class="unlock-list">
+            ${found.unlocks.map(item => `<li>✓ ${item}</li>`).join("")}
+          </ul>
+
+          <button onclick="location.href='desktop.html'">Перейти к расследованию</button>
+        </div>
+      `;
+    } else {
+      result.innerHTML = `
+        <div class="error-box">
+          Код доступа не найден. Проверьте конверт и попробуйте снова.
+        </div>
+      `;
+    }
+  } catch (error) {
     result.innerHTML = `
       <div class="error-box">
-        Код доступа не найден. Проверьте конверт и попробуйте снова.
+        Ошибка загрузки кодов: ${error.message}
       </div>
     `;
   }
 }
-
 async function loadSuspects() {
   const grid = document.getElementById("suspectsGrid");
   const progress = getProgress();
