@@ -157,7 +157,7 @@ async function loadEvidence() {
 
   const progress = getProgress();
 
-  const response = await fetch("data/evidence.json");
+  const response = await fetch("data/evidence.json?v=" + Date.now());
   const evidence = await response.json();
 
   list.innerHTML = "";
