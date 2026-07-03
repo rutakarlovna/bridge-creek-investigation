@@ -40,6 +40,14 @@
     "file": "assets/documents/phone/correspondence-mark-wallace.png"
   },
   {
+  "level": 3,
+  "title": "Дело ребёнка Лины",
+  "type": "MEDICAL",
+  "status": "Доступно",
+  "description": "Медицинское дело ребёнка Лины. В документах указана необходимость дорогостоящей операции.",
+  "file": "assets/documents/medical/lina-baby-medical-file.png"
+},
+  {
     "level": 3,
     "title": "Выписка звонков",
     "type": "PHONE",
