@@ -304,3 +304,23 @@ function closeDocument() {
   viewer.innerHTML = "";
   modal.style.display = "none";
 }
+function submitDecision() {
+  const selected = document.querySelector('input[name="killer"]:checked');
+
+  if (!selected) {
+    alert("Выберите подозреваемого.");
+    return;
+  }
+
+  if (selected.value === "ryan") {
+    localStorage.setItem("finalUnlocked", "true");
+
+    alert("ДОСТУП РАЗРЕШЁН. Засекреченные материалы открыты.");
+
+    location.href = "classified.html";
+  } else {
+    alert("Заключение не подтверждено. Доказательств недостаточно. Вернитесь к материалам дела.");
+
+    location.href = "desktop.html";
+  }
+}

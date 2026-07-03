@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заключение детектива</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="os-body">
+
+<div class="workspace">
+
+    <div class="topbar">
+        <h1>Заключение детектива</h1>
+        <p>Выберите человека, которого считаете убийцей Лины Харпер.</p>
+    </div>
+
+    <div class="decision-box">
+
+        <label><input type="radio" name="killer" value="mark"> Марк Уоллес</label>
+
+        <label><input type="radio" name="killer" value="ryan"> Райан Уоллес</label>
+
+        <label><input type="radio" name="killer" value="kyle"> Кайл Беннет</label>
+
+        <label><input type="radio" name="killer" value="sarah"> Сара Коулман</label>
+
+        <label><input type="radio" name="killer" value="thomas"> Томас Джонс</label>
+
+        <label><input type="radio" name="killer" value="daniel"> Дэниел Рид</label>
+
+        <button onclick="submitDecision()">
+            Подтвердить решение
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/game.js"></script>
+
+</body>
+</html>

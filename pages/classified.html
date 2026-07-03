@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Засекреченные материалы</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="os-body">
+
+<div class="workspace">
+
+  <div class="topbar">
+    <h1>Засекреченные материалы</h1>
+    <p>Финальный доступ • дело BC-2025-017</p>
+  </div>
+
+  <section class="system-alert">
+    Финальные материалы открываются только после правильного заключения детектива.
+  </section>
+
+  <div class="app-grid">
+
+    <div class="app-card available">
+      <div class="app-icon">🎙️</div>
+      <h2>Допрос Райана — часть 1</h2>
+      <p>Финальный протокол признания.</p>
+      <button onclick="openDocument('../assets/documents/final/Interview-with-Ryan-Finale1.png', 'Допрос Райана — часть 1')">Открыть</button>
+    </div>
+
+    <div class="app-card available">
+      <div class="app-icon">🎙️</div>
+      <h2>Допрос Райана — часть 2</h2>
+      <p>Продолжение финального допроса.</p>
+      <button onclick="openDocument('../assets/documents/final/Interview-with-Ryan-Finale2.png', 'Допрос Райана — часть 2')">Открыть</button>
+    </div>
+
+    <div class="app-card available">
+      <div class="app-icon">📰</div>
+      <h2>Финальная газетная выписка</h2>
+      <p>Публикация после закрытия дела.</p>
+      <button onclick="openDocument('../assets/documents/final/the-final-extract-from-the-newspaper.png', 'Финальная газетная выписка')">Открыть</button>
+    </div>
+
+  </div>
+
+</div>
+
+<div id="documentModal" class="document-modal">
+  <div class="document-window">
+    <div class="document-header">
+      <strong id="documentTitle">Документ</strong>
+      <button class="close-doc" onclick="closeDocument()">Закрыть</button>
+    </div>
+    <div id="documentViewer" class="document-frame"></div>
+  </div>
+</div>
+
+<script src="../js/game.js"></script>
+
+</body>
+</html>
