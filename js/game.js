@@ -212,7 +212,7 @@ async function loadSuspectProfile() {
 
   const id = localStorage.getItem("selectedSuspect");
 
-  const response = await fetch("../data/suspects.json");
+  const response = await fetch("../data/envelopes.json?v=" + Date.now());
   const suspects = await response.json();
 
   const person = suspects.find(item => item.id === id);
