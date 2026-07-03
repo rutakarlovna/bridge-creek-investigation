@@ -19,7 +19,7 @@ async function checkAccessCode() {
   const response = await fetch("../data/envelopes.json");
   const envelopes = await response.json();
 
-  const found = envelopes.find(item => item.code === code);
+  const found = envelopes.find(item => item.code.toUpperCase() === code);
 
   if (found) {
     saveProgress(found.id);
