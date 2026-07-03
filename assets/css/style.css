@@ -847,3 +847,45 @@ footer {
 .decision-box button{
     margin-top:30px;
 }
+.decision-box {
+  max-width: 700px;
+  margin: 40px auto;
+  background: rgba(10, 18, 28, 0.92);
+  border: 1px solid rgba(125, 180, 255, 0.3);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.decision-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(160, 190, 230, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.decision-option:hover {
+  background: rgba(100, 150, 220, 0.12);
+  border-color: rgba(160, 200, 255, 0.5);
+}
+
+.decision-option input {
+  transform: scale(1.25);
+}
+
+.decision-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.decision-actions button {
+  min-width: 180px;
+}
