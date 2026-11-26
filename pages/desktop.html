@@ -24,19 +24,16 @@
       <a href="../evidence.html">Улики</a>
       <a href="access.html">Ввести код</a>
     </nav>
-<div class="app-card available">
 
-    <div class="app-icon">🔐</div>
-
-    <h2>Терминал доступа</h2>
-
-    <p>Введите код из вскрытого конверта.</p>
-
-    <button onclick="location.href='access.html'">
+    <div class="app-card available">
+      <div class="app-icon">🔐</div>
+      <h2>Терминал доступа</h2>
+      <p>Введите код из вскрытого конверта.</p>
+      <button onclick="location.href='access.html'">
         Открыть
-    </button>
+      </button>
+    </div>
 
-</div>
     <div class="sidebar-footer">
       Detective: AVA REED<br>
       Access: LEVEL II
@@ -56,28 +53,17 @@
       </div>
     </div>
 
-   <section class="system-alert" id="systemAlert">
-Новые разделы открываются после ввода кодов доступа из конвертов.
-</section>
+    <section class="system-alert" id="systemAlert">
+      Новые разделы открываются после ввода кодов доступа из конвертов.
+    </section>
 
     <section class="app-grid">
-      
 
       <div class="app-card available">
         <div class="app-icon">📁</div>
         <h2>Дело</h2>
         <p>Основная информация, хронология, первичный рапорт.</p>
         <button onclick="location.href='../case-lina.html'">Открыть</button>
-        <div class="app-card locked-section" data-unlock="10">
-          
- <div class="app-card locked-section" data-unlock="10">
-  <div class="app-icon">⚖️</div>
-  <h2>Финальное заключение</h2>
-  <p>Выберите единственного виновного по делу Лины Харпер.</p>
-  <button disabled class="section-button" data-link="final-decision.html">Недоступно</button>
-</div>
-  
-</div>
       </div>
 
       <div class="app-card available">
@@ -86,18 +72,21 @@
         <p>База лиц, связанных с делом Лины Харпер.</p>
         <button onclick="location.href='../suspects.html'">Открыть</button>
       </div>
-<div class="app-card available">
-  <div class="app-icon">📂</div>
-  <h2>Архив улик</h2>
-  <p>Отчёты, цифровые следы, показания и материалы экспертиз.</p>
-  <button onclick="location.href='../evidence.html'">Открыть</button>
-</div>
-<div class="app-card available">
-  <div class="app-icon">📰</div>
-  <h2>Газетный архив</h2>
-  <p>Публикации Bridge Creek Daily по делу Эммы Стейл и Лины Харпер.</p>
-  <button onclick="location.href='news.html'">Открыть</button>
-</div>
+
+      <div class="app-card available">
+        <div class="app-icon">📂</div>
+        <h2>Архив улик</h2>
+        <p>Отчёты, цифровые следы, показания и материалы экспертиз.</p>
+        <button onclick="location.href='../evidence.html'">Открыть</button>
+      </div>
+
+      <div class="app-card available">
+        <div class="app-icon">📰</div>
+        <h2>Газетный архив</h2>
+        <p>Публикации Bridge Creek Daily по делу Эммы Стейл и Лины Харпер.</p>
+        <button onclick="location.href='news.html'">Открыть</button>
+      </div>
+
       <div class="app-card locked-section" data-unlock="3">
         <div class="app-icon">📱</div>
         <h2>Телефон Лины</h2>
@@ -126,18 +115,30 @@
         <button onclick="location.href='access.html'">Ввести код</button>
       </div>
 
+      <div class="app-card locked-section" data-unlock="10">
+        <div class="app-icon">⚖️</div>
+        <h2>Финальное заключение</h2>
+        <p>Выберите единственного виновного по делу Лины Харпер.</p>
+        <button disabled class="section-button" data-link="final-decision.html">Недоступно</button>
+      </div>
+
     </section>
-<section class="case-journal">
-  <h2>Журнал расследования</h2>
-  <div id="timelineList"></div>
-</section>
-    <button class="test-reset" onclick="resetProgress()">Сбросить прогресс теста</button>
+
+    <section class="case-journal">
+      <h2>Журнал расследования</h2>
+      <div id="timelineList"></div>
+    </section>
+
+    <button class="test-reset" onclick="resetProgress()">
+      Сбросить прогресс теста
+    </button>
 
   </main>
 
 </div>
 
 <script src="../js/game.js"></script>
+
 <script>
   updateDesktopProgress();
   updateLockedSections();
