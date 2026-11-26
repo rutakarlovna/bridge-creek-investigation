@@ -70,7 +70,7 @@ if (found.id === 10) {
 
 Система BCPD ожидает официального заключения детектива.
 
-После выбора подозреваемого изменить решение будет невозможно.`
+Перед подтверждением заключения убедитесь, что ваша версия подтверждается собранными доказательствами.`
         );
 
     },500);
@@ -364,6 +364,11 @@ function closeDocument() {
   modal.style.display = "none";
 }
 function submitDecision() {
+    if (getProgress() < 10) {
+    alert("Недостаточно материалов для вынесения заключения.");
+    location.replace("desktop.html");
+    return;
+  }
   const selected = document.querySelector('input[name="killer"]:checked');
   const reason = document.getElementById("decisionReason");
 
