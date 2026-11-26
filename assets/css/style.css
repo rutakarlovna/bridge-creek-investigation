@@ -900,39 +900,60 @@ footer {
   font-size: 16px;
   resize: vertical;
 }
-/* Исправление фотографий персонажей */
+/* База персонажей: единая структура карточек */
+#suspectsGrid .card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+#suspectsGrid .card img,
+#suspectsGrid .locked-silhouette {
+  width: 100%;
+  height: 330px;
+  flex: 0 0 330px;
+  background: #0b1120;
+}
 
 #suspectsGrid .card img {
-    width: 100%;
-    height: 330px;
-    object-fit: contain;
-    background: #0b1120;
+  object-fit: contain;
+  display: block;
+}
+
+#suspectsGrid .locked-silhouette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  font-weight: bold;
+  color: #64748b;
+}
+
+#suspectsGrid .card .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  gap: 6px;
+}
+
+#suspectsGrid .card .info button {
+  margin-top: auto;
+}
+
+#suspectsGrid .card .info p:last-of-type {
+  margin-bottom: 12px;
 }
 
 .profile-card img {
-    object-fit: contain;
-    height: auto;
-}
-
-/* Заблокированные персонажи */
-
-.suspect-locked {
-    display: flex;
-    flex-direction: column;
-}
-
-.locked-silhouette {
-    width: 100%;
-    height: 330px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 100px;
-    font-weight: bold;
-    color: #475569;
-    background: #0b1120;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  align-self: start;
 }
 
 .case-section ul {
-    padding-left: 20px;
+  padding-left: 20px;
 }
