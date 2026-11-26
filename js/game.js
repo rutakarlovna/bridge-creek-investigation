@@ -140,8 +140,18 @@ function updateDesktopProgress() {
   }
 }
 function resetProgress() {
+  const confirmed = confirm(
+    "Вы действительно хотите начать расследование заново? Весь игровой прогресс будет удалён."
+  );
+
+  if (!confirmed) return;
+
   localStorage.removeItem("bridgeCreekProgress");
-  alert("Прогресс сброшен. Сейчас сайт вернётся к началу расследования.");
+  localStorage.removeItem("finalUnlocked");
+  localStorage.removeItem("selectedSuspect");
+
+  alert("Прогресс расследования сброшен.");
+
   location.reload();
 }
 function updateLockedSections() {
@@ -257,7 +267,7 @@ async function loadSuspectProfile() {
 
   const id = localStorage.getItem("selectedSuspect");
 
-  const response = await fetch("../data/envelopes.json?v=" + Date.now());
+ const response = await fetch("../data/suspects.json?v=" + Date.now());
   const suspects = await response.json();
 
   const person = suspects.find(item => item.id === id);
@@ -380,7 +390,7 @@ function updateSystemAlert() {
 
     const progress = getProgress();
 
-    if (progress >= 90) {
+    if (progress >= 9) {
 
         alertBox.innerHTML = `
         ⚠ СИСТЕМА ОБНАРУЖИЛА ПРОТИВОРЕЧИЯ В РАССЛЕДОВАНИИ.<br><br>
