@@ -32,8 +32,22 @@ async function checkAccessCode() {
 
     const found = envelopes.find(item => item.code.toUpperCase() === code);
 
-    if (found) {
-      saveProgress(found.id);
+  if (found) {
+
+    const currentLevel = getProgress();
+
+    if (found.id > currentLevel + 1) {
+      result.innerHTML = `
+        <div class="error-box">
+          <h2>ДОСТУП ЗАПРЕЩЁН</h2>
+          <p>Нарушена последовательность расследования.</p>
+          <p>Сначала откройте предыдущий конверт.</p>
+        </div>
+      `;
+      return;
+    }
+
+    saveProgress(found.id);
       if (found.id === 9) {
     setTimeout(() => {
         alert(
@@ -267,7 +281,7 @@ async function loadSuspectProfile() {
 
   const id = localStorage.getItem("selectedSuspect");
 
- const response = await fetch("../data/suspects.json?v=" + Date.now());
+  const response = await fetch("../data/suspects.json?v=" + Date.now());
   const suspects = await response.json();
 
   const person = suspects.find(item => item.id === id);
@@ -277,53 +291,43 @@ async function loadSuspectProfile() {
     return;
   }
 
+  if (person.unlockLevel > getProgress()) {
+    box.innerHTML = "<p>Доступ к досье запрещён.</p>";
+    return;
+  }
+
   box.innerHTML = `
     <div class="profile-card">
       <img src="../assets/images/${person.photo}" alt="${person.name}">
+
       <div>
         <span class="tag blue">${person.role}</span>
         <h1>${person.name}</h1>
         <p><strong>Возраст:</strong> ${person.age}</p>
         <p>${person.description}</p>
-        <div class="suspect-meter">
-  <div>Уровень подозрения: ${person.suspicion || 0}%</div>
-  <div class="bar">
-    <div class="fill" style="width:${person.suspicion || 0}%"></div>
-  </div>
-</div>
-
-<div class="case-section">
-  <h2>Алиби</h2>
-  <p>${person.alibi || "Нет данных."}</p>
-</div>
-
-<div class="case-section">
-  <h2>Связи</h2>
-  <ul>
-    ${(person.connections || []).map(item => `<li>${item}</li>`).join("")}
-  </ul>
-</div>
 
         <div class="suspect-meter">
-  <div>Уровень подозрения: ${person.suspicion || 0}%</div>
-  <div class="bar">
-    <div class="fill" style="width:${person.suspicion || 0}%"></div>
-  </div>
-</div>
+          <div>Уровень подозрения: ${person.suspicion || 0}%</div>
+          <div class="bar">
+            <div class="fill" style="width:${person.suspicion || 0}%"></div>
+          </div>
+        </div>
 
-<div class="case-section">
-  <h2>Алиби</h2>
-  <p>${person.alibi || "Нет данных."}</p>
-</div>
+        <div class="case-section">
+          <h2>Алиби</h2>
+          <p>${person.alibi || "Нет данных."}</p>
+        </div>
 
-<div class="case-section">
-  <h2>Связи</h2>
-  <ul>
-    ${(person.connections || []).map(item => `<li>${item}</li>`).join("")}
-  </ul>
-</div>
+        <div class="case-section">
+          <h2>Связи</h2>
+          <ul>
+            ${(person.connections || []).map(item => `<li>${item}</li>`).join("")}
+          </ul>
+        </div>
 
-        <button onclick="location.href='../suspects.html'">Назад к базе лиц</button>
+        <button onclick="location.href='../suspects.html'">
+          Назад к базе лиц
+        </button>
       </div>
     </div>
   `;
