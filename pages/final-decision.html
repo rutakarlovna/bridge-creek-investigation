@@ -9,8 +9,6 @@
 
 <body class="os-body">
 
-<body class="os-body">
-
 <div class="workspace">
 
   <div class="topbar">
@@ -66,5 +64,13 @@
 </div>
 
 <script src="../js/game.js"></script>
+
+<script>
+  if (getProgress() < 10) {
+    alert("Доступ запрещён. Сначала соберите все материалы дела.");
+    location.href = "desktop.html";
+  }
+</script>
+
 </body>
 </html>
