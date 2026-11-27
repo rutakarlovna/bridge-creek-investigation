@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -37,34 +38,54 @@
 
     <section class="camera-list">
 
-      <div class="camera-card">
-        <div class="camera-preview">21:32</div>
+      <div class="camera-card" data-level="4">
+
+        <div class="camera-preview locked-preview">
+          21:32
+        </div>
+
         <div>
-          <span class="tag blue">ДОСТУПНО</span>
+          <span class="tag gray">ЗАБЛОКИРОВАНО</span>
+
           <h2>Церковная дорога</h2>
-          <p>Лина садится в автомобиль Томаса Джонса.</p>
-          <button onclick="location.href='../evidence.html'">Открыть материал</button>
+
+          <p class="camera-description">
+            Доступ к записи ограничен.
+          </p>
+
+          <button disabled
+            data-file="../assets/documents/cctv/lina-is-leaving-with-thomas.mp4"
+            data-title="Церковная дорога — 21:32"
+            data-description="Лина садится в автомобиль Томаса Джонса.">
+            Недоступно
+          </button>
         </div>
+
       </div>
 
-      <div class="camera-card">
-        <div class="camera-preview locked-preview">22:15</div>
-        <div>
-          <span class="tag gray">ЗАБЛОКИРОВАНО</span>
-          <h2>Машина Кайла</h2>
-          <p>Запись будет доступна после следующего конверта.</p>
-          <button disabled>Недоступно</button>
-        </div>
-      </div>
+      <div class="camera-card" data-level="9">
 
-      <div class="camera-card">
-        <div class="camera-preview locked-preview">20:00</div>
+        <div class="camera-preview locked-preview">
+          20:00
+        </div>
+
         <div>
           <span class="tag gray">ЗАБЛОКИРОВАНО</span>
+
           <h2>Сарай Уоллесов</h2>
-          <p>Запись скрыта до финальных материалов.</p>
-          <button disabled>Недоступно</button>
+
+          <p class="camera-description">
+            Доступ к записи ограничен.
+          </p>
+
+          <button disabled
+            data-file="../assets/documents/cctv/Ryan-steals-a-gun.mp4"
+            data-title="Сарай Уоллесов — 20:00"
+            data-description="Восстановленная запись с камеры наблюдения. Требуется изучение материала.">
+            Недоступно
+          </button>
         </div>
+
       </div>
 
     </section>
@@ -72,6 +93,92 @@
   </main>
 
 </div>
+
+<div id="documentModal"
+     class="document-modal"
+     style="display: none;">
+
+  <div class="document-window">
+
+    <div class="document-header">
+
+      <strong id="documentTitle">
+        Видеозапись
+      </strong>
+
+      <button class="close-doc"
+        onclick="closeDocument()">
+        Закрыть
+      </button>
+
+    </div>
+
+    <div id="documentViewer"
+         class="document-frame">
+    </div>
+
+  </div>
+
+</div>
+
+<script src="../js/game.js?v=6"></script>
+
+<script>
+
+  const progress = getProgress();
+
+  if (progress < 4) {
+
+    alert("Доступ к архиву камер ограничен.");
+    location.replace("desktop.html");
+
+  } else {
+
+    document.querySelectorAll(".camera-card").forEach(card => {
+
+      const requiredLevel = Number(card.dataset.level);
+
+      const button = card.querySelector("button");
+      const tag = card.querySelector(".tag");
+      const preview = card.querySelector(".camera-preview");
+      const description = card.querySelector(".camera-description");
+
+      if (progress >= requiredLevel) {
+
+        tag.textContent = "ДОСТУПНО";
+        tag.className = "tag blue";
+
+        preview.classList.remove("locked-preview");
+
+        description.textContent = button.dataset.description;
+
+        button.disabled = false;
+        button.textContent = "Воспроизвести запись";
+
+        button.onclick = function () {
+
+          openDocument(
+            button.dataset.file,
+            button.dataset.title
+          );
+
+        };
+
+      } else {
+
+        tag.textContent = "ЗАБЛОКИРОВАНО";
+        tag.className = "tag gray";
+
+        button.disabled = true;
+        button.textContent = "Недоступно";
+
+      }
+
+    });
+
+  }
+
+</script>
 
 </body>
 </html>
