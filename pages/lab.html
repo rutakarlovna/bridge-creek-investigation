@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -38,24 +39,47 @@
     <section class="lab-grid">
 
       <div class="lab-card">
-        <span class="tag blue">ДНК</span>
-        <h2>ДНК-экспертиза</h2>
-        <p>Результаты анализа будут доступны после открытия соответствующего конверта.</p>
-        <button onclick="location.href='../evidence.html'">Открыть архив</button>
+        <span class="tag blue">БАЛЛИСТИКА</span>
+        <h2>Баллистический отчёт по Кайлу</h2>
+        <p>Материалы экспертного исследования по делу Кайла Беннета.</p>
+        <button disabled data-level="5"
+          data-file="../assets/documents/forensics/balistics-kyle.png"
+          data-title="Баллистический отчёт по Кайлу">
+          Доступ ограничен
+        </button>
       </div>
 
       <div class="lab-card">
         <span class="tag blue">ОТПЕЧАТКИ</span>
         <h2>Отпечатки на велосипеде</h2>
-        <p>Сравнение следов с образцами подозреваемых.</p>
-        <button onclick="location.href='../evidence.html'">Открыть архив</button>
+        <p>Сравните обнаруженные отпечатки с образцами из досье подозреваемых.</p>
+        <button disabled data-level="6"
+          data-file="../assets/documents/forensics/bicycle-fingerprints.png"
+          data-title="Отпечатки на велосипеде">
+          Доступ ограничен
+        </button>
+      </div>
+
+      <div class="lab-card">
+        <span class="tag blue">ДНК</span>
+        <h2>ДНК-экспертиза</h2>
+        <p>Биологические образцы для самостоятельного сравнительного анализа.</p>
+        <button disabled data-level="7"
+          data-file="../assets/documents/dna/dna-samples-for-analysis.png"
+          data-title="ДНК-образцы">
+          Доступ ограничен
+        </button>
       </div>
 
       <div class="lab-card">
         <span class="tag blue">БАЛЛИСТИКА</span>
-        <h2>Пуля</h2>
-        <p>Экспертиза оружия и связи со старым полицейским пистолетом.</p>
-        <button onclick="location.href='../evidence.html'">Открыть архив</button>
+        <h2>Баллистический отчёт по Лине</h2>
+        <p>Материалы экспертного исследования по делу Лины Харпер.</p>
+        <button disabled data-level="7"
+          data-file="../assets/documents/forensics/balistics.png"
+          data-title="Баллистический отчёт по Лине">
+          Доступ ограничен
+        </button>
       </div>
 
     </section>
@@ -63,6 +87,51 @@
   </main>
 
 </div>
+
+<div id="documentModal" class="document-modal">
+  <div class="document-window">
+    <div class="document-header">
+      <strong id="documentTitle">Документ</strong>
+      <button class="close-doc" onclick="closeDocument()">
+        Закрыть
+      </button>
+    </div>
+
+    <div id="documentViewer" class="document-frame"></div>
+  </div>
+</div>
+
+<script src="../js/game.js?v=4"></script>
+
+<script>
+  const progress = getProgress();
+
+  if (progress < 5) {
+    alert("Доступ к лаборатории ограничен.");
+    location.replace("desktop.html");
+  } else {
+    document.querySelectorAll(".lab-card button").forEach(button => {
+
+      const requiredLevel = Number(button.dataset.level);
+
+      if (progress >= requiredLevel) {
+        button.disabled = false;
+        button.textContent = "Открыть документ";
+
+        button.onclick = function () {
+          openDocument(button.dataset.file, button.dataset.title);
+        };
+
+      } else {
+        button.disabled = true;
+        button.textContent = "Доступ ограничен";
+        button.style.opacity = "0.4";
+        button.style.cursor = "not-allowed";
+      }
+
+    });
+  }
+</script>
 
 </body>
 </html>
