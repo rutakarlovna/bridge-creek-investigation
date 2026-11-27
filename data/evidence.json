@@ -1,3 +1,4 @@
+
 [
   {
     "level": 1,
@@ -14,6 +15,14 @@
     "status": "Доступно",
     "description": "Публикация Bridge Creek Daily.",
     "file": "assets/documents/newspapers/newspaper.png"
+  },
+  {
+    "level": 1,
+    "title": "Первичный допрос Франка Харпера",
+    "type": "INTERVIEW",
+    "status": "Доступно",
+    "description": "Показания отца Лины Харпер.",
+    "file": "assets/documents/interviews/interviews-frank-harper.png"
   },
   {
     "level": 2,
@@ -39,22 +48,22 @@
     "description": "Переписка Лины с Марком.",
     "file": "assets/documents/phone/correspondence-mark-wallace.png"
   },
- {
-  "level": 3,
-  "title": "Дело ребёнка Лины",
-  "type": "MEDICAL",
-  "status": "Доступно",
-  "description": "Медицинское дело ребёнка Лины. В документах указана необходимость дорогостоящей операции.",
-  "file": "assets/documents/important/baby.png"
-},
   {
-  "level": 3,
-  "title": "Выписка звонков",
-  "type": "PHONE",
-  "status": "Восстановлено",
-  "description": "Журнал звонков с телефона Лины.",
-  "file": "assets/documents/important/calls.png"
-},
+    "level": 3,
+    "title": "Дело ребёнка Лины",
+    "type": "MEDICAL",
+    "status": "Доступно",
+    "description": "Медицинское дело ребёнка Лины. В документах указана необходимость дорогостоящей операции.",
+    "file": "assets/documents/important/baby.png"
+  },
+  {
+    "level": 3,
+    "title": "Выписка звонков",
+    "type": "PHONE",
+    "status": "Восстановлено",
+    "description": "Журнал звонков с телефона Лины.",
+    "file": "assets/documents/important/calls.png"
+  },
   {
     "level": 4,
     "title": "Допрос Сары",
@@ -88,11 +97,27 @@
     "file": "assets/documents/medical/kyle-medical-report-in-coma.png"
   },
   {
+    "level": 5,
+    "title": "Повторный допрос Франка Харпера",
+    "type": "INTERVIEW",
+    "status": "Доступно",
+    "description": "Протокол повторного допроса отца Лины.",
+    "file": "assets/documents/interviews/interviews-frank-harper-2.png"
+  },
+  {
+    "level": 5,
+    "title": "Баллистический отчёт по делу Кайла Беннета",
+    "type": "FORENSICS",
+    "status": "Доступно",
+    "description": "Результаты баллистической экспертизы по делу Кайла Беннета.",
+    "file": "assets/documents/forensics/balistics-kyle.png"
+  },
+  {
     "level": 6,
     "title": "Велосипед с отпечатками",
     "type": "FORENSICS",
     "status": "Доступно",
-    "description": "Осмотр велосипеда Лины.",
+    "description": "Обнаруженные отпечатки пальцев. Требуется сравнительный анализ.",
     "file": "assets/documents/forensics/bicycle-fingerprints.png"
   },
   {
@@ -105,52 +130,51 @@
   },
   {
     "level": 7,
-    "title": "Баллистическая экспертиза",
+    "title": "Баллистический отчёт по делу Лины Харпер",
     "type": "FORENSICS",
     "status": "Доступно",
-    "description": "Экспертиза пули и оружия.",
+    "description": "Результаты баллистической экспертизы по делу Лины Харпер.",
     "file": "assets/documents/forensics/balistics.png"
   },
   {
-    "level": 8,
-    "title": "Дело Томаса Хилла",
-    "type": "CASE",
+    "level": 7,
+    "title": "Медицинский отчёт: состояние Кайла",
+    "type": "MEDICAL",
     "status": "Доступно",
-    "description": "Материалы ветки с фургоном.",
-    "file": "assets/documents/interviews/branch-van-early-dossier-thomass-hill.png"
-    
+    "description": "Обновлённые сведения о состоянии Кайла и возможности проведения ДНК-экспертизы.",
+    "file": "assets/documents/medical/kyle-medical-report-can-take-dna.png"
   },
   {
-  "level": 8,
-  "title": "Досье Томаса Хилла",
-  "type": "CASE",
-  "status": "Доступно",
-  "description": "Первичное досье по Томасу Хиллу и делу о пропавших девушках.",
-  "file": "assets/documents/interviews/branch-van-early-dossier-thomass-hill.png"
-},
-{
-  "level": 8,
-  "title": "Показания свидетелей по синему фургону",
-  "type": "REPORT",
-  "status": "Доступно",
-  "description": "Свидетели сообщают о синем фургоне, замеченном в районе исчезновений.",
-  "file": "assets/documents/reports/branch-van-report-witnesses.png"
-},
-{
-  "level": 8,
-  "title": "Отчёт о задержании Томаса Хилла",
-  "type": "REPORT",
-  "status": "Доступно",
-  "description": "Материалы задержания Томаса Хилла по делу о похищениях.",
-  "file": "assets/documents/reports/branch-van-report-thomas-detained.png"
-},
-  {
-    "level": 9,
+    "level": 7,
     "title": "ДНК-образцы",
     "type": "DNA",
     "status": "Доступно",
-    "description": "Образцы ДНК для анализа.",
+    "description": "Образцы ДНК для самостоятельного сравнительного анализа.",
     "file": "assets/documents/dna/dna-samples-for-analysis.png"
+  },
+  {
+    "level": 8,
+    "title": "Досье Томаса Хилла",
+    "type": "CASE",
+    "status": "Доступно",
+    "description": "Первичное досье по Томасу Хиллу и делу о пропавших девушках.",
+    "file": "assets/documents/interviews/branch-van-early-dossier-thomass-hill.png"
+  },
+  {
+    "level": 8,
+    "title": "Показания свидетелей по синему фургону",
+    "type": "REPORT",
+    "status": "Доступно",
+    "description": "Свидетели сообщают о синем фургоне, замеченном в районе исчезновений.",
+    "file": "assets/documents/reports/branch-van-report-witnesses.png"
+  },
+  {
+    "level": 8,
+    "title": "Отчёт о задержании Томаса Хилла",
+    "type": "REPORT",
+    "status": "Доступно",
+    "description": "Материалы задержания Томаса Хилла по делу о похищениях.",
+    "file": "assets/documents/reports/branch-van-report-thomas-detained.png"
   },
   {
     "level": 9,
