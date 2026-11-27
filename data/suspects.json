@@ -1,3 +1,4 @@
+
 [
   {
     "id": "lina-harper",
@@ -5,6 +6,8 @@
     "role": "Жертва",
     "age": "17 лет",
     "photo": "lina-harper.png",
+    "fingerprint": "lina-fimgerprint.png",
+    "fingerprintLevel": 6,
     "unlockLevel": 1,
     "description": "Найдена мёртвой у реки. Обстоятельства смерти устанавливаются.",
     "updates": [
@@ -34,6 +37,12 @@
     "photo": "frank-harper.png",
     "unlockLevel": 1,
     "description": "Отец Лины. Сотрудничает со следствием.",
+    "updates": [
+      {
+        "level": 5,
+        "text": "Признался в нападении на Кайла Беннета. Задержан. Материалы выделены в отдельное производство."
+      }
+    ],
     "alibi": "По его словам, находился дома вместе с супругой.",
     "connections": [
       "Лина Харпер",
@@ -46,6 +55,8 @@
     "role": "Бывший полицейский",
     "age": "38 лет",
     "photo": "mark-wallace.png",
+    "fingerprint": "mark-fimgerprint.png",
+    "fingerprintLevel": 6,
     "unlockLevel": 3,
     "description": "Обнаружена переписка с Линой Харпер.",
     "updates": [
@@ -79,6 +90,8 @@
     "role": "Подозреваемая",
     "age": "17 лет",
     "photo": "sarah-coleman.png",
+    "fingerprint": "sarah-fimgerprint.png",
+    "fingerprintLevel": 6,
     "unlockLevel": 4,
     "description": "Новая девушка Кайла. Организовала встречу, закончившуюся дракой.",
     "alibi": "Согласно показаниям, Лина покинула место встречи живой.",
@@ -94,12 +107,18 @@
     "role": "Бывший парень Лины",
     "age": "18 лет",
     "photo": "kyle-bennett.png",
+    "fingerprint": "kyle-fingerprint.png",
+    "fingerprintLevel": 6,
     "unlockLevel": 4,
     "description": "Бывший парень Лины. Упоминается в показаниях о конфликте.",
     "updates": [
       {
         "level": 5,
-        "text": "Получил огнестрельное ранение. Доставлен в больницу."
+        "text": "Получил огнестрельное ранение. Доставлен в больницу. Находится в коме."
+      },
+      {
+        "level": 7,
+        "text": "Вышел из комы. Медицинским персоналом разрешено взятие образцов ДНК."
       }
     ],
     "connections": [
@@ -128,11 +147,13 @@
     "role": "Священник",
     "age": "45 лет",
     "photo": "thomas-jones.png",
+    "fingerprint": "thomas-fimgerprint.png",
+    "fingerprintLevel": 6,
     "unlockLevel": 4,
     "description": "Зафиксирован на камерах наблюдения вместе с Линой.",
     "updates": [
       {
-        "level": 6,
+        "level": 7,
         "text": "Обнаружены его отпечатки на велосипеде Лины."
       },
       {

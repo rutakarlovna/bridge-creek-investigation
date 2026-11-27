@@ -1,3 +1,4 @@
+
 function getProgress() {
   return Number(localStorage.getItem("bridgeCreekProgress")) || 1;
 }
@@ -32,25 +33,26 @@ async function checkAccessCode() {
 
     const found = envelopes.find(item => item.code.toUpperCase() === code);
 
-  if (found) {
+    if (found) {
 
-    const currentLevel = getProgress();
+      const currentLevel = getProgress();
 
-    if (found.id > currentLevel + 1) {
-      result.innerHTML = `
-        <div class="error-box">
-          <h2>ДОСТУП ЗАПРЕЩЁН</h2>
-          <p>Нарушена последовательность расследования.</p>
-          <p>Сначала откройте предыдущий конверт.</p>
-        </div>
-      `;
-      return;
-    }
+      if (found.id > currentLevel + 1) {
+        result.innerHTML = `
+          <div class="error-box">
+            <h2>ДОСТУП ЗАПРЕЩЁН</h2>
+            <p>Нарушена последовательность расследования.</p>
+            <p>Сначала откройте предыдущий конверт.</p>
+          </div>
+        `;
+        return;
+      }
 
-    saveProgress(found.id);
+      saveProgress(found.id);
+
       if (found.id === 9) {
-    setTimeout(() => {
-        alert(
+        setTimeout(() => {
+          alert(
 `ВНИМАНИЕ
 
 Новые материалы противоречат текущей версии расследования.
@@ -58,24 +60,21 @@ async function checkAccessCode() {
 Рекомендуется повторно изучить все документы по делу перед вынесением окончательного заключения.
 
 Система BCPD.`
-        );
-    }, 500);
-}
-if (found.id === 10) {
+          );
+        }, 500);
+      }
 
-    setTimeout(() => {
-
-        alert(
+      if (found.id === 10) {
+        setTimeout(() => {
+          alert(
 `ВСЕ ДОКАЗАТЕЛЬСТВА СОБРАНЫ.
 
 Система BCPD ожидает официального заключения детектива.
 
 Перед подтверждением заключения убедитесь, что ваша версия подтверждается собранными доказательствами.`
-        );
-
-    },500);
-
-}
+          );
+        }, 500);
+      }
 
       result.innerHTML = `
         <div class="success-box">
@@ -91,6 +90,7 @@ if (found.id === 10) {
           <button onclick="location.href='desktop.html'">Перейти к расследованию</button>
         </div>
       `;
+
     } else {
       result.innerHTML = `
         <div class="error-box">
@@ -98,6 +98,7 @@ if (found.id === 10) {
         </div>
       `;
     }
+
   } catch (error) {
     result.innerHTML = `
       <div class="error-box">
@@ -106,6 +107,7 @@ if (found.id === 10) {
     `;
   }
 }
+
 async function loadSuspects() {
   const grid = document.getElementById("suspectsGrid");
   const progress = getProgress();
@@ -125,25 +127,26 @@ async function loadSuspects() {
             <h2>${person.name}</h2>
             <p><strong>Возраст:</strong> ${person.age}</p>
             <p>${person.description}</p>
-          
+
             <button onclick="openSuspect('${person.id}')">Открыть досье</button>
           </div>
         </div>
       `;
     } else {
       grid.innerHTML += `
-  <div class="card locked-card suspect-locked">
-    <div class="locked-silhouette">?</div>
-    <div class="info">
-      <span class="tag gray">ЗАБЛОКИРОВАНО</span>
-      <h2>Личность не установлена</h2>
-      <p>Досье скрыто. Требуется новый код доступа.</p>
-    </div>
-  </div>
-`;
+        <div class="card locked-card suspect-locked">
+          <div class="locked-silhouette">?</div>
+          <div class="info">
+            <span class="tag gray">ЗАБЛОКИРОВАНО</span>
+            <h2>Личность не установлена</h2>
+            <p>Досье скрыто. Требуется новый код доступа.</p>
+          </div>
+        </div>
+      `;
     }
   });
 }
+
 function updateDesktopProgress() {
   const progressText = document.getElementById("progressText");
   const level = getProgress();
@@ -153,6 +156,7 @@ function updateDesktopProgress() {
     progressText.textContent = percent + "%";
   }
 }
+
 function resetProgress() {
   const confirmed = confirm(
     "Вы действительно хотите начать расследование заново? Весь игровой прогресс будет удалён."
@@ -168,6 +172,7 @@ function resetProgress() {
 
   location.reload();
 }
+
 function updateLockedSections() {
   const level = getProgress();
   const sections = document.querySelectorAll(".locked-section");
@@ -178,7 +183,7 @@ function updateLockedSections() {
     const button = section.querySelector(".section-button");
 
     if (level >= unlockLevel) {
-     section.classList.add("unlocked");
+      section.classList.add("unlocked");
 
       if (tag) {
         tag.textContent = "ДОСТУПНО";
@@ -187,14 +192,16 @@ function updateLockedSections() {
 
       if (button) {
         button.disabled = false;
-button.textContent = "Открыть";
-button.onclick = function () {
-  location.href = button.dataset.link;
-};
+        button.textContent = "Открыть";
+
+        button.onclick = function () {
+          location.href = button.dataset.link;
+        };
       }
     }
   });
 }
+
 async function loadTimeline() {
   const list = document.getElementById("timelineList");
   if (!list) return;
@@ -220,6 +227,7 @@ async function loadTimeline() {
     }
   });
 }
+
 async function loadEvidence() {
   const list = document.getElementById("evidenceList");
   if (!list) return;
@@ -240,13 +248,16 @@ async function loadEvidence() {
             <h2>${item.title}</h2>
             <p>${item.description}</p>
             <span>${item.status}</span>
-           <button onclick="openDocument('${item.file}', '${item.title}')">Открыть документ</button>
+            <button onclick="openDocument('${item.file}', '${item.title}')">
+              Открыть документ
+            </button>
           </div>
         </div>
       `;
     }
   });
 }
+
 async function loadNews() {
   const list = document.getElementById("newsList");
   if (!list) return;
@@ -271,10 +282,12 @@ async function loadNews() {
     }
   });
 }
+
 function openSuspect(id) {
   localStorage.setItem("selectedSuspect", id);
   location.href = "pages/suspect-profile.html";
 }
+
 async function loadSuspectProfile() {
   const box = document.getElementById("suspectProfile");
   if (!box) return;
@@ -336,6 +349,18 @@ async function loadSuspectProfile() {
           </div>
         ` : ""}
 
+        ${person.fingerprint && progress >= Number(person.fingerprintLevel || 6) ? `
+          <div class="case-section">
+            <h2>Отпечатки пальцев</h2>
+            <p>Образцы доступны для сравнительного анализа.</p>
+
+            <button type="button"
+              onclick="showFingerprint('${person.fingerprint}', '${person.name}')">
+              Посмотреть отпечатки пальцев
+            </button>
+          </div>
+        ` : ""}
+
         <div class="case-section">
           <h2>Установленные связи</h2>
 
@@ -354,6 +379,7 @@ async function loadSuspectProfile() {
     </div>
   `;
 }
+
 function openDocument(filePath, title) {
   const modal = document.getElementById("documentModal");
   const viewer = document.getElementById("documentViewer");
@@ -385,12 +411,15 @@ function closeDocument() {
   viewer.innerHTML = "";
   modal.style.display = "none";
 }
+
 function submitDecision() {
-    if (getProgress() < 10) {
+
+  if (getProgress() < 10) {
     alert("Недостаточно материалов для вынесения заключения.");
     location.replace("desktop.html");
     return;
   }
+
   const selected = document.querySelector('input[name="killer"]:checked');
   const reason = document.getElementById("decisionReason");
 
@@ -406,29 +435,74 @@ function submitDecision() {
 
   if (selected.value === "ryan") {
     localStorage.setItem("finalUnlocked", "true");
+
     alert("ДОСТУП РАЗРЕШЁН. Засекреченные материалы открыты.");
+
     location.href = "classified.html";
+
   } else {
+
     alert("Заключение не подтверждено. Доказательств недостаточно. Вернитесь к материалам дела.");
+
     location.href = "desktop.html";
   }
 }
+
 function updateSystemAlert() {
 
-    const alertBox = document.getElementById("systemAlert");
+  const alertBox = document.getElementById("systemAlert");
 
-    if (!alertBox) return;
+  if (!alertBox) return;
 
-    const progress = getProgress();
+  const progress = getProgress();
 
-    if (progress >= 9) {
+  if (progress >= 9) {
 
-        alertBox.innerHTML = `
-        ⚠ СИСТЕМА ОБНАРУЖИЛА ПРОТИВОРЕЧИЯ В РАССЛЕДОВАНИИ.<br><br>
-        Повторно изучите материалы дела перед вынесением окончательного заключения.
-        `;
+    alertBox.innerHTML = `
+      ⚠ СИСТЕМА ОБНАРУЖИЛА ПРОТИВОРЕЧИЯ В РАССЛЕДОВАНИИ.<br><br>
+      Повторно изучите материалы дела перед вынесением окончательного заключения.
+    `;
 
-    }
-
+  }
 }
+
 updateSystemAlert();
+
+function showFingerprint(filename, name) {
+
+  if (getProgress() < 6) return;
+
+  if (!document.getElementById("documentModal")) {
+
+    const modal = document.createElement("div");
+
+    modal.id = "documentModal";
+    modal.className = "document-modal";
+    modal.style.display = "none";
+
+    modal.innerHTML = `
+      <div class="document-window">
+
+        <div class="document-header">
+
+          <strong id="documentTitle">Документ</strong>
+
+          <button class="close-doc" onclick="closeDocument()">
+            Закрыть
+          </button>
+
+        </div>
+
+        <div id="documentViewer" class="document-frame"></div>
+
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+  }
+
+  openDocument(
+    "../assets/documents/fingerprints/" + filename,
+    "Отпечатки пальцев — " + name
+  );
+}
